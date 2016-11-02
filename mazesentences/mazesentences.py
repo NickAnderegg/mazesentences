@@ -32,11 +32,12 @@ PROGRAMNAME="mazesentences"
 VERSION=__version__
 COPYRIGHT="(C) 2016 Nick Anderegg"
 
-from .elasticconnector import ElasticConnector
+from .stimulusprocessor import get_sentences, _get_trials_file
+import json
 
 def main():
-    connector = ElasticConnector('http://192.168.1.150:9200', 'chinese_simplified', 2)
-    connector.get_contexts(5, {1: '恶'})
+    # get_sentences()
+    _get_trials_file()
 
 if __name__ == "__main__":
     main()
