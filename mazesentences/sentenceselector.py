@@ -111,10 +111,9 @@ class Selector(ElasticConnector):
             sentence = hit['_source']['sentence']
             sentences.append(sentence)
 
+        print('Got {} sentences for {}...'.format(len(sentences), word))
         if len(sentences) == 0:
             return None
-
-        print('Got {} sentences for {}...'.format(len(sentences), word))
 
         # return sentences
         return self._process_sentences(sentences, word, max_sentences)
@@ -185,9 +184,18 @@ class Selector(ElasticConnector):
                 # print('Too early: {}'.format(sentence))
                 continue
 
-            if quick_tokenized.index(word) > len(quick_tokenized) * .85:
+            if quick_tokenized.index(word) >= len(quick_tokenized) - 2 or quick_tokenized.index(word) > len(quick_tokenized) * .85:
                 rejected += 1
                 # print('Too late: {}'.format(sentence))
+                continue
+
+            contains_ascii = False
+            for char in list(sentence):
+                if ord(char) < 128 and unicodedata.category(char)[0] != 'P':
+                    contains_ascii = True
+                    break
+            if contains_ascii:
+                rejected += 1
                 continue
 
             tokenized = self.tokenize_sentence(sentence)
@@ -221,6 +229,7 @@ class Selector(ElasticConnector):
             if max_sentences and len(sentence_info) > max_sentences:
                 break
 
+        print('Processed {}/{} sentences for {} ({} rejected) in {:.2f}s...'.format((len(sentence_info)+rejected), len(sentences), word, rejected, (time.perf_counter()-process_start)))
         sentence_info = sorted(sentence_info, key=itemgetter(3), reverse=True)
         # sentence_info = sorted(sentence_info, key=itemgetter(2), reverse=True)
 

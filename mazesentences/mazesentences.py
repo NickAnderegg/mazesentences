@@ -32,12 +32,13 @@ PROGRAMNAME="mazesentences"
 VERSION=__version__
 COPYRIGHT="(C) 2016 Nick Anderegg"
 
-from .stimulusprocessor import get_sentences, _get_trials_file
+from .stimulusprocessor import get_sentences, _get_trials_file, _get_incomplete_sets, _reprocess_trials
 import json
 
 def main():
-    # get_sentences()
-    _get_trials_file()
+    get_sentences()
+    # _get_incomplete_sets()
+    # _reprocess_trials()
 
 if __name__ == "__main__":
     main()
