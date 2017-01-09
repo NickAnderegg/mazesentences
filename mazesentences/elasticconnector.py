@@ -7,6 +7,7 @@ import unicodedata
 import time
 import random
 import yaml
+from math import log10
 random.seed(int(time.perf_counter()))
 
 class ElasticConnectorBase(object):
@@ -166,7 +167,7 @@ class ElasticConnector(ElasticConnectorBase):
                 for k in range(3, 6):
                     if probs[k] is 0:
                         break
-                    smooth_avg = (Decimal(0.75) * probs[k]) + (Decimal(1 - 0.75) * smooth_avg)
+                    smooth_avg = (Decimal(0.67) * probs[k]) + (Decimal(1 - 0.67) * smooth_avg)
                 weighted_combined[key] = smooth_avg
 
             weighted_combined = list(weighted_combined.items())
@@ -180,7 +181,7 @@ class ElasticConnector(ElasticConnectorBase):
                 for k in range(3, 6):
                     if probs[k] is 0:
                         break
-                    smooth_avg = (Decimal(0.75) * probs[k]) + (Decimal(1 - 0.75) * smooth_avg)
+                    smooth_avg = (Decimal(0.67) * probs[k]) + (Decimal(1 - 0.67) * smooth_avg)
                 weighted_words[key] = smooth_avg
 
             weighted_words = list(weighted_words.items())
@@ -197,19 +198,31 @@ class ElasticConnector(ElasticConnectorBase):
             #         above += 1
             # print(below, above)
 
+            # print(tokenized[i])
             prohibited_parts = set()
+            cutoff_parts = set()
+
+            cutoff = round(weighted_combined[int(len(weighted_combined)/5*3)][1])
+            # print('Cutoff: ', cutoff)
             for part, freq in weighted_combined:
-                if freq >= Decimal(25.0):
+
+                if freq >= Decimal(100/8):
                     # prohibited_parts.append(
                     #     {'regexp': {'token_1': '.*_{}'.format(part)}}
                     # )
+                    # print('Prohibited Part: ', part, '\tFreq: ', freq)
                     prohibited_parts.add(part)
+                elif freq >= cutoff:
+                    # print('Cutoff Part: ', part, '\tFreq: ', freq)
+                    cutoff_parts.add(part)
+                # else:
+                    # print('Allowed Part: ', part, '\tFreq: ', freq)
 
-            for part in (ignore_parts | ignore_low):
-                # prohibited_parts.append(
-                #     {'regexp': {'token_1': '.*_{}'.format(part)}}
-                # )
-                prohibited_parts.add(part)
+            # for part in (ignore_parts | ignore_low):
+            #     # prohibited_parts.append(
+            #     #     {'regexp': {'token_1': '.*_{}'.format(part)}}
+            #     # )
+            #     prohibited_parts.add(part)
 
             # print(prohibited_parts)
 
@@ -248,8 +261,7 @@ class ElasticConnector(ElasticConnectorBase):
 
             # prohibition = prohibited_parts + prohibited_items[:256]
             possibilities_query = {
-                # 'sort': {'total_count': {'order': 'desc'}},
-                'size': 1000,
+                'size': 2500,
                 'query': {
                     'function_score': {
                         'filter': {
@@ -257,7 +269,12 @@ class ElasticConnector(ElasticConnectorBase):
                                 'must': [
                                     {'term': {'n': 1}},
                                     {'regexp': {'token_1': '[一-鿌]{{{}}}_.*'.format(token_length)}}
-                                ]#,
+                                ],
+                                'must_not': [
+                                    {'regexp': {'token_1': '.*_{}'.format(part)}} for part in prohibited_parts
+                                ]
+
+                                #,
                                 #'must_not': prohibition#prohibited_items[:512] + prohibited_parts
                             }
                         },
@@ -272,6 +289,8 @@ class ElasticConnector(ElasticConnectorBase):
                 }
             }
 
+            # print(json.dumps(possibilities_query, indent=2, ensure_ascii=False))
+
             possibilities_query = bytearray(json.dumps(possibilities_query, ensure_ascii=False), 'utf-8')
             resp = requests.get(
                 '{}/_search'.format(self.ngram_index),
@@ -280,9 +299,21 @@ class ElasticConnector(ElasticConnectorBase):
             if resp.status_code == requests.codes.ok:
                 possibilities = resp.json()['hits']['hits']
                 # print(resp.json()['hits']['total'])
+                # print('Took:', resp.json()['took'])
             else:
                 print(resp.text)
                 print(resp.request.body.decode('utf-8'))
+
+            # print(json.dumps(possibilities[:2], indent=2, ensure_ascii=False))
+
+            sort_poss = []
+            for result in possibilities:
+                orig_sort = round(log10(result['_source']['total_count']), 3)
+                new_sort = orig_sort - abs(random.gauss(1, .25))
+                # print(orig_sort, new_sort)
+                sort_poss.append((new_sort, result))
+
+            possibilities = [result for sort, result in sorted(sort_poss, key=itemgetter(0), reverse=True)]
 
             for result in possibilities:
                 poss_token, poss_part = tuple(result['_source']['token_1'].split('_'))
@@ -293,8 +324,35 @@ class ElasticConnector(ElasticConnectorBase):
                     continue
                 elif poss_token in prohibited_items:
                     continue
+                elif poss_part in (ignore_parts | ignore_low):
+                    continue
                 elif poss_part in prohibited_parts:
                     continue
+                elif i < 3 and poss_part == 'PRT':
+                    continue
+
+                pos_dist = self.token_pos_dist(poss_token)
+                if not pos_dist:
+                    continue
+                reject = False
+                for pos, freq in pos_dist:
+                    if freq > Decimal(1):
+                        if pos in prohibited_parts:
+                            # print('Rejecting prohibited {} ({}), {} / Freq: {}'.format(poss_token, poss_part, pos, freq))
+                            reject = True
+                            break
+                        elif pos in cutoff_parts:
+                            if freq > Decimal(20) or (freq > Decimal(5) and i < 3):
+                                # print('Rejecting cutoff {} ({}), {} / Freq: {}'.format(poss_token, poss_part, pos, freq))
+                                reject = True
+                                break
+
+                if reject:
+                    continue
+                    # if pos in prohibited_parts:
+                    #     print('Token: {}\tPOS: {}\tFreq: {}'.format(poss_token, pos, freq))
+
+                # print('Accepting token: {}\t POS: {}\n'.format(poss_token, poss_part))
 
                 # poss_token = poss_token.split('_')
                 # antisentence.append(poss_token[0])
@@ -380,6 +438,58 @@ class ElasticConnector(ElasticConnectorBase):
             prev_end = token['end_offset']
 
         return tokenized
+
+    def token_pos_dist(self, token, as_dict=False):
+        token_check_query = {
+            'query': {
+                'constant_score': {
+                    'filter': {
+                        'bool': {
+                            'must': [
+                                {'term': {'n': 1}},
+                                {'wildcard': {'token_1': '{}_*'.format(token)}}
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+        token_check_query = bytearray(json.dumps(token_check_query, ensure_ascii=False), 'utf-8')
+        token_check = requests.get(
+            '{}/_search'.format(self.ngram_index),
+            data=token_check_query
+        )
+        if token_check.status_code == requests.codes.ok:
+            hits = token_check.json()['hits']
+            parts = hits['hits']
+            total_found = hits['total']
+        else:
+            print(token_check.text)
+            print(token_check.request.body.decode('utf-8'))
+            return False
+
+        if not total_found:
+            # print(token_check.text)
+            return False
+
+        count_sum = 0
+        dist_raw = dict()
+        for result in parts:
+            tok, speech_part = tuple(result['_source']['token_1'].split('_'))
+            total_count = int(result['_source']['total_count'])
+
+            count_sum += total_count
+
+            dist_raw[speech_part] = total_count
+
+        # print(dist_raw)
+        dist = []
+        for key, value in dist_raw.items():
+            dist.append((key, value / count_sum * 100))
+
+        dist = sorted(dist, key=itemgetter(1), reverse=True)
+
+        return dist
 
     def check_token_exists(self, token):
         # token_check_query = {'query': {'constant_score': {'filter': {'bool': {'must': [{'term': {'n': 1}}, {'regexp': {'token_1': '{}(_.*)?'.format(token)}}]}}}}}

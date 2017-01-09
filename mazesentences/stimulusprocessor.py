@@ -35,7 +35,7 @@ def read_file():
 
     return stimuli
 
-def _reprocess_trials():
+def reprocess_trials():
     trials_file = _get_trials_file(increment=False)
 
     if not trials_file.exists():
@@ -46,7 +46,15 @@ def _reprocess_trials():
         trials_list = trials_list['sentences']
 
     bad_trials = []
+    checked_stimuli = set()
     for ix, trial in enumerate(trials_list):
+
+        if trial['critical_target'] in checked_stimuli:
+            bad_trials.append(ix)
+            print('Duplicate trial found...')
+            continue
+
+        checked_stimuli.add(trial['critical_target'])
 
         contains_ascii = False
         for char in list(trial['full_sentence']):
@@ -55,10 +63,18 @@ def _reprocess_trials():
                 break
         if contains_ascii:
             bad_trials.append(ix)
+            print('Sentence #{} contains ascii'.format(ix+1))
+            continue
+
+        if 'new_sentence' in trial and trial['new_sentence'] is True:
+            bad_trials.append(ix)
+            print('Sentence #{} marked for regeneration'.format(ix+1))
             continue
 
         if trial['full_sentence'].index(trial['critical_target']) >= len(trial['full_sentence']) - 3:
+            print('Sentence #{} has late critical char appearance'.format(ix+1))
             bad_trials.append(ix)
+            continue
 
     for t in sorted(bad_trials, reverse=True):
         print(trials_list.pop(t))
@@ -88,7 +104,16 @@ def _get_incomplete_sets():
         trials[t['critical_target']] = t
 
     for stim in (set(trials) - set(stimuli)):
+        poss_replace = trials[stim]['distractors']['both_sim']
+        if poss_replace in stimuli and stimuli[poss_replace]['both_sim'] == stim:
+            print('Stimuli swap found for {} and {}'.format(poss_replace, stim))
+
+            stimuli[stim] = stimuli[poss_replace].copy()
+            stimuli[stim]['both_sim'] = poss_replace
+            del stimuli[poss_replace]
+            continue
         del trials[stim]
+        # print('Skipping {}...'.format(stim))
 
     incomplete_critical = list(set(stimuli) - set(trials))
     incomplete_sets = dict((crit, stimuli[crit]) for crit in incomplete_critical)
@@ -102,10 +127,10 @@ def _get_incomplete_sets():
         count += 1
         t['sentence_number'] = count
 
-    return incomplete_sets, trials_list
+    return incomplete_sets, trials_list, stimuli.keys()
 
 def get_sentences():
-    stimuli, trials = _get_incomplete_sets()
+    stimuli, trials, full_set = _get_incomplete_sets()
 
     trials_file = _get_trials_file()
 
@@ -114,10 +139,14 @@ def get_sentences():
     if trials is None:
         trials = {'sentences': []}
         count = 0
+        print('Loaded {} extant trials, {} stimuli to process...'.format(count, len(stimuli)))
     else:
         count = len(trials)
-        print('Loaded {} extant trials...'.format(count))
+        print('Loaded {} extant trials, {} stimuli to process...'.format(count, len(stimuli)))
         trials = {'sentences': trials}
+
+        with trials_file.open('w', encoding='utf-8') as f:
+            json.dump(trials, f, ensure_ascii=False, indent=2)
 
     for critical, distractors in stimuli.items():
         count += 1
@@ -131,9 +160,13 @@ def get_sentences():
 
             sentences = selector.get_sentences(critical, max_sentences=1000)
 
-            if not sentences:
+            if sentences and len(sentences) < 15:
+                too_few = True
+            else:
+                too_few = False
+            if not sentences or too_few:
                 new_critical = distractors['both_sim']
-                if new_critical not in stimuli:
+                if new_critical not in stimuli and new_critical not in full_set:
                     print('Attempting flipped pair')
                     print('Old critical:', critical)
                     print('Old distractors:', distractors)
@@ -151,7 +184,26 @@ def get_sentences():
                     print('New distractors:', distractors)
 
                     sentences = selector.get_sentences(critical, max_sentences=1000)
-                    if not sentences:
+                    if not sentences and too_few:
+                        new_critical = distractors['both_sim']
+                        print('Attempting flipped pair')
+                        print('Old critical:', critical)
+                        print('Old distractors:', distractors)
+                        trial = dict()
+                        trial['sentence_number'] = count
+                        trial['critical_target'] = new_critical
+
+                        new_distractors = distractors.copy()
+                        new_distractors['both_sim'] = critical
+                        trial['distractors'] = new_distractors
+
+                        critical = new_critical
+                        distractors = new_distractors
+                        print('New critical:', critical)
+                        print('New distractors:', distractors)
+
+                        sentences = selector.get_sentences(critical, max_sentences=1000)
+                    elif not sentences:
                         continue
                 else:
                     print('Cannot attempt flipped pair. Continuing...')
@@ -205,3 +257,110 @@ def _get_trials_file(increment=True):
     else:
         # print('Returning: ', trials_file)
         return trials_file
+
+def generate_sample(n, choices=None):
+    trials_file = _get_trials_file(increment=False)
+
+    with trials_file.open('r', encoding='utf-8') as f:
+        trials_list = json.load(f)
+        trials_list = trials_list['sentences']
+
+    if not choices:
+        choices = random.sample(range(1, len(trials_list)+1), n)
+
+    subset = []
+    for choice in choices:
+        subset.append(trials_list[choice-1])
+
+    file_output = []
+
+    file_output.append('========\nSample Trials:\n========\n')
+
+    for trial in subset:
+        file_output.append('--------\n')
+        file_output.append('Trial: {}\n'.format(trial['sentence_number']))
+        file_output.append('Critical: {} / Distractors – Both: {} | Orth: {} | Phon: {} | Diff: {}\n\n'.format(
+            trial['critical_target'],
+            trial['distractors']['both_sim'],
+            trial['distractors']['orth_sim'],
+            trial['distractors']['phon_sim'],
+            trial['distractors']['both_dif']
+        ))
+
+        file_output.append('Full sentence: {}\n\n'.format(trial['full_sentence']))
+        target_sentence = []
+        distractor_sentence = []
+        for pair in trial['sentence']:
+            if 'Ｘ' in pair[1]:
+                pair[1] = ''.join(['Ｘ']*len(pair[0]))
+            if pair[1] == '*':
+                target_sentence[-1] += pair[0]
+                distractor_sentence[-1] += pair[0]
+            else:
+                target_sentence.append(pair[0])
+                distractor_sentence.append(pair[1])
+
+        target_sentence = ' | '.join(target_sentence)
+        distractor_sentence = ' | '.join(distractor_sentence)
+
+        if len(target_sentence) > 55:
+            try:
+                break_point = target_sentence[55:].index(' | ') + 55
+
+                target_sentence = (target_sentence[:55],  target_sentence[57:])
+                distractor_sentence = (distractor_sentence[:55], distractor_sentence[57:])
+            except:
+                pass
+
+        if type(target_sentence) is str:
+            file_output.append('Target: {}\n'.format(target_sentence))
+            file_output.append('Alter.: {}\n\n'.format(distractor_sentence))
+        else:
+            file_output.append('Target: {} ->\n'.format(target_sentence[0]))
+            file_output.append('Alter.: {} ->\n\n'.format(distractor_sentence[0]))
+
+            file_output.append('Target (cont.): {}\n'.format(target_sentence[1]))
+            file_output.append('Alter. (cont.): {}\n\n'.format(distractor_sentence[1]))
+
+    sample_file = pathlib.Path('mazesentences/data/trial_samples{}.txt'.format(trials_file.stem[-5:]))
+    with sample_file.open('w', encoding='utf-8') as f:
+        f.writelines(file_output)
+
+def generate_sentences_raw():
+    trials_file = _get_trials_file(increment=False)
+
+    with trials_file.open('r', encoding='utf-8') as f:
+        trials_list = json.load(f)
+        trials_list = trials_list['sentences']
+
+    file_output = []
+
+    for trial in trials_list:
+        file_output.append('Sentence: {}, Critical: {}\n{}~ {}\n\n'.format(trial['sentence_number'], trial['critical_target'], trial['sentence_number'], trial['full_sentence']))
+
+    sentences_file = pathlib.Path('mazesentences/data/sentences_raw{}.txt'.format(trials_file.stem[-5:]))
+    with sentences_file.open('w', encoding='utf-8') as f:
+        f.writelines(file_output)
+
+def recombine_sentences(n):
+    raw_file = pathlib.Path('mazesentences/data/sentences_raw_v{:0>3}.txt'.format(n))
+    translated_file = pathlib.Path('mazesentences/data/sentences_translated_v{:0>3}.txt'.format(n))
+
+    with raw_file.open('r', encoding='utf-8') as f_raw:
+        raw_lines = {}
+        for line in f_raw:
+            if '~' in line:
+                num, sentence = tuple(line.strip().split('~'))
+                raw_lines[int(num.strip())] = sentence.strip()
+
+    with translated_file.open('r', encoding='utf-8') as f_translated:
+        translated_lines = {}
+        for line in f_translated:
+            if len(line) > 1:
+                num, sentence = tuple(line.strip().split('~ '))
+                translated_lines[int(num)] = sentence
+
+    combined_file = pathlib.Path('mazesentences/data/sentences_combined_v{:0>3}.txt'.format(n))
+    with combined_file.open('w', encoding='utf-8') as f:
+        for num in raw_lines:
+            f.write('Sentence {:0>3}:\n{}\n{}\n\n'.format(num, raw_lines[num], translated_lines[num]))

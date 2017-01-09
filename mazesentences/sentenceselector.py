@@ -189,6 +189,10 @@ class Selector(ElasticConnector):
                 # print('Too late: {}'.format(sentence))
                 continue
 
+            if list(sentence).index(word) >= len(sentence) - 3:
+                rejected += 1
+                continue
+
             contains_ascii = False
             for char in list(sentence):
                 if ord(char) < 128 and unicodedata.category(char)[0] != 'P':
@@ -235,7 +239,7 @@ class Selector(ElasticConnector):
 
         # for sentence in sentence_info[:100]:
         #     print(sentence)
-        return sentence_info[:5]#, len(sentence_info), rejected
+        return sentence_info[:20]#, len(sentence_info), rejected
 
     def _transition_frequencies(self, sentence):
         pairs = len(sentence) - 1

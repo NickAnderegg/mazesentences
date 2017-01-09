@@ -1,0 +1,51 @@
+========
+Sample Trials:
+========
+--------
+Trial: 20
+Critical: 抬 / Distractors – Both: 胎 | Orth: 给 | Phon: 太 | Diff: 荫
+
+Full sentence: 右腿软软的，抬不起来。
+
+Target: 右腿 | 软软 | 的, | 抬 | 不 | 起来.
+Alter.: ＸＸ | 高度 | 屋, | ＃ | 舶 | 气功.
+
+--------
+Trial: 36
+Critical: 沐 / Distractors – Both: 汨 | Orth: 汪 | Phon: 剃 | Diff: 昂
+
+Full sentence: 叶峥把奶茶塞进沐之言手里，然后拦腰将她抱了起来。
+
+Target: 叶 | 峥 | 把 | 奶茶 | 塞进 | 沐 | 之 | 言 | 手里, | 然后 | 拦 | 腰 | 将  ->
+Alter.: Ｘ | 仙 | 否 | 自卫 | 救国 | ＃ | 引 | 现 | 装饰, | 再现 | 矶 | 翁 | 罩  ->
+
+Target (cont.): 她 | 抱 | 了 | 起来.
+Alter. (cont.): 或 | 镍 | 何 | 哈巴.
+
+--------
+Trial: 59
+Critical: 吱 / Distractors – Both: 肢 | Orth: 听 | Phon: 湿 | Diff: 筵
+
+Full sentence: 这时，西屋的房门吱呀一声开了。
+
+Target: 这时, | 西屋 | 的 | 房门 | 吱 | 呀 | 一声 | 开 | 了.
+Alter.: ＸＸ, | 赎罪 | 剩 | 署名 | ＃ | 亿 | 两头 | 证 | 析.
+
+--------
+Trial: 74
+Critical: 吹 / Distractors – Both: 吱 | Orth: 听 | Phon: 摧 | Diff: 摁
+
+Full sentence: 我说妖精吹的是仙气。
+
+Target: 我 | 说 | 妖精 | 吹 | 的是 | 仙 | 气.
+Alter.: Ｘ | 昔 | 古老 | ＃ | 既得 | 所 | 卟.
+
+--------
+Trial: 70
+Critical: 温 / Distractors – Both: 揾 | Orth: 揭 | Phon: 问 | Diff: 哉
+
+Full sentence: 他听了，流下温软的一滴泪。
+
+Target: 他 | 听 | 了, | 流下 | 温 | 软 | 的 | 一滴 | 泪.
+Alter.: Ｘ | 遗 | 锢, | 后方 | ＃ | 逆 | 负 | 萧条 | 讣.
+
