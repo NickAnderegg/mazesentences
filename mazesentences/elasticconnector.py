@@ -202,21 +202,22 @@ class ElasticConnector(ElasticConnectorBase):
             prohibited_parts = set()
             cutoff_parts = set()
 
-            cutoff = round(weighted_combined[int(len(weighted_combined)/5*3)][1])
-            # print('Cutoff: ', cutoff)
-            for part, freq in weighted_combined:
+            if len(weighted_combined) > 0:
+                cutoff = round(weighted_combined[int(len(weighted_combined)/5*3)][1])
+                # print('Cutoff: ', cutoff)
+                for part, freq in weighted_combined:
 
-                if freq >= Decimal(100/8):
-                    # prohibited_parts.append(
-                    #     {'regexp': {'token_1': '.*_{}'.format(part)}}
-                    # )
-                    # print('Prohibited Part: ', part, '\tFreq: ', freq)
-                    prohibited_parts.add(part)
-                elif freq >= cutoff:
-                    # print('Cutoff Part: ', part, '\tFreq: ', freq)
-                    cutoff_parts.add(part)
-                # else:
-                    # print('Allowed Part: ', part, '\tFreq: ', freq)
+                    if freq >= Decimal(100/8):
+                        # prohibited_parts.append(
+                        #     {'regexp': {'token_1': '.*_{}'.format(part)}}
+                        # )
+                        # print('Prohibited Part: ', part, '\tFreq: ', freq)
+                        prohibited_parts.add(part)
+                    elif freq >= cutoff:
+                        # print('Cutoff Part: ', part, '\tFreq: ', freq)
+                        cutoff_parts.add(part)
+                    # else:
+                        # print('Allowed Part: ', part, '\tFreq: ', freq)
 
             # for part in (ignore_parts | ignore_low):
             #     # prohibited_parts.append(
@@ -375,7 +376,13 @@ class ElasticConnector(ElasticConnectorBase):
             # if antisentence[i] == '*':
             #     paired_sentence[-1] = [paired_sentence[-1][0] + tokenized[i], paired_sentence[-1][1] + tokenized[i]]
             # else:
-            paired_sentence.append([tokenized[i], antisentence[i]])
+            try:
+                paired_sentence.append([tokenized[i], antisentence[i]])
+            except IndexError:
+                print('Error! Antisentence generated incorrectly!')
+                print('Sentence:\t', tokenized)
+                print('Antisent:\t', antisentence)
+                return 'Error! {}'.format(paired_sentence)
 
         # print(json.dumps(paired_sentence, encoding='utf-8', ensure_ascii=False))
         return paired_sentence

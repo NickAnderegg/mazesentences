@@ -1,0 +1,105 @@
+========
+Sample Trials:
+========
+--------
+Trial: 70
+Critical: 硌 / Distractors – Both: 铬 | Orth: 铵 | Phon: 刻 | Diff: 臃
+
+Full sentence: 再次醒来的时候，林木躺在一张床上，这张床很硬，硌得林木浑身生疼。
+
+Target: 再次 | 醒来 | 的 | 时候, | 林木 | 躺在 | 一张 | 床上, | 这 | 张 | 床 | 很  ->
+Alter.: ＸＸ | 日常 | 日 | 受到, | 国有 | 履行 | 成为 | 社会, | 人 | 中 | 既 | 到  ->
+
+Target (cont.): 硬, | 硌 | 得 | 林木 | 浑身 | 生 | 疼.
+Alter. (cont.): 与, | ＃ | 都 | 现代 | 就是 | 局 | 将.
+
+--------
+Trial: 92
+Critical: 铭 / Distractors – Both: 酩 | Orth: 铬 | Phon: 明 | Diff: 澳
+
+Full sentence: 李知府让周旭铭把昨日的情形叙述一遍。
+
+Target: 李 | 知府 | 让 | 周 | 旭 | 铭 | 把 | 昨日 | 的 | 情形 | 叙述 | 一遍.
+Alter.: Ｘ | 从而 | 要 | 则 | 最 | ＃ | 不 | 国有 | 但 | 没有 | 建设 | 共同.
+
+--------
+Trial: 12
+Critical: 哟 / Distractors – Both: 呦 | Orth: 响 | Phon: 摇 | Diff: 逛
+
+Full sentence: 可怜的美琪痛得唉哟了一夜。
+
+Target: 可怜 | 的 | 美 | 琪 | 痛得 | 唉 | 哟 | 了 | 一夜.
+Alter.: ＸＸ | 已 | 也 | 较 | 企业 | 内 | ＃ | 等 | 仍然.
+
+--------
+Trial: 2
+Critical: 倦 / Distractors – Both: 卷 | Orth: 倚 | Phon: 剑 | Diff: 讴
+
+Full sentence: 我会陪她去上晚自习，倦了就到静静的花园里坐一会儿。
+
+Target: 我 | 会 | 陪 | 她 | 去 | 上 | 晚 | 自 | 习, | 倦 | 了 | 就到 | 静静 |  ->
+Alter.: Ｘ | 与 | 日 | 要 | 这 | 月 | 很 | 须 | 将, | ＃ | 在 | 但是 | 在于 |  ->
+
+Target (cont.): | 花园 | 里 | 坐 | 一 | 会 | 儿.
+Alter. (cont.): | 得到 | 只 | 业 | 但 | 从 | 都.
+
+--------
+Trial: 39
+Critical: 吱 / Distractors – Both: 肢 | Orth: 听 | Phon: 湿 | Diff: 筵
+
+Full sentence: 这时，西屋的房门吱呀一声开了。
+
+Target: 这时, | 西屋 | 的 | 房门 | 吱 | 呀 | 一声 | 开 | 了.
+Alter.: ＸＸ, | 主义 | 要 | 只是 | ＃ | 会 | 也是 | 各 | 只.
+
+--------
+Trial: 81
+Critical: 宛 / Distractors – Both: 碗 | Orth: 苑 | Phon: 衍 | Diff: 滋
+
+Full sentence: 他悄悄对参加了救援小组的莫宛航说道。
+
+Target: 他 | 悄悄 | 对 | 参加 | 了 | 救援 | 小组 | 的 | 莫 | 宛 | 航 | 说道.
+Alter.: Ｘ | 新型 | 有 | 任何 | 将 | 就是 | 所谓 | 毫 | 但 | ＃ | 这 | 也是.
+
+--------
+Trial: 62
+Critical: 根 / Distractors – Both: 柑 | Orth: 柚 | Phon: 感 | Diff: 肟
+
+Full sentence: 时钟的分针牵引着老板心中那根紧绷的弦。
+
+Target: 时钟 | 的 | 分针 | 牵引 | 着 | 老板 | 心中 | 那 | 根 | 紧 | 绷 | 的 | 弦.
+Alter.: ＸＸ | 这 | 已经 | 进行 | 各 | 各个 | 人民 | 副 | ＃ | 吧 | 权 | 都 | 了.
+
+--------
+Trial: 19
+Critical: 沿 / Distractors – Both: 泱 | Orth: 治 | Phon: 衍 | Diff: 迄
+
+Full sentence: 三人打的沿阿亮回家的路追去。
+
+Target: 三人 | 打 | 的 | 沿 | 阿 | 亮 | 回家 | 的 | 路 | 追去.
+Alter.: ＸＸ | 日 | 曾 | ＃ | 都 | 呢 | 直到 | 对 | 为 | 各个.
+
+--------
+Trial: 15
+Critical: 缉 / Distractors – Both: 辑 | Orth: 缘 | Phon: 几 | Diff: 赝
+
+Full sentence: 他很快得到上下的认可，升为缉毒中队的中队长。
+
+Target: 他 | 很快 | 得到 | 上下 | 的 | 认可, | 升 | 为 | 缉 | 毒 | 中 | 队 | 的  ->
+Alter.: Ｘ | 直属 | 作用 | 整个 | 曾 | 离开, | 年 | 此 | ＃ | 者 | 又 | 这 | 竟  ->
+
+Target (cont.): 中 | 队长.
+Alter. (cont.): 只 | 之后.
+
+--------
+Trial: 46
+Critical: 眩 / Distractors – Both: 铉 | Orth: 铱 | Phon: 渲 | Diff: 迂
+
+Full sentence: 语毕，只见那只手幻化成七彩眩光，慢慢的化作无数萤火虫离去。
+
+Target: 语 | 毕, | 只 | 见 | 那只 | 手 | 幻 | 化成 | 七彩 | 眩 | 光, | 慢慢 | 的 ->
+Alter.: Ｘ | 谨, | 人 | 党 | 大力 | 既 | 较 | 关于 | 必须 | ＃ | 对, | 增加 | 月 ->
+
+Target (cont.):  化作 | 无数 | 萤火 | 虫 | 离去.
+Alter. (cont.):  按照 | 只有 | 达到 | 各 | 对外.
+

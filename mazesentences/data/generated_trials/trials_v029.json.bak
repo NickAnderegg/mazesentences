@@ -252,7 +252,6 @@
         ]
       ],
       "sentence_number": 3,
-      "new_sentence": true,
       "critical_target": "漆",
       "full_sentence": "这样的环境无疑对收割漆的人们的生命造成威胁。"
     },
@@ -583,7 +582,6 @@
       ],
       "sentence_number": 8,
       "critical_target": "浩",
-      "new_sentence": true,
       "full_sentence": "一面在王浩的脸颊上吻了一下。"
     },
     {
@@ -686,7 +684,6 @@
       ],
       "sentence_number": 10,
       "critical_target": "王",
-      "new_sentence": true,
       "full_sentence": "三子不耐烦的向王明说道。"
     },
     {
@@ -727,7 +724,6 @@
         ]
       ],
       "sentence_number": 11,
-      "new_sentence": true,
       "critical_target": "提",
       "full_sentence": "冥的眼光变提犀利。"
     },
@@ -948,7 +944,6 @@
       ],
       "sentence_number": 14,
       "critical_target": "柱",
-      "new_sentence": true,
       "full_sentence": "放羊的那段日子是三柱最高兴的日子了。"
     },
     {
@@ -1128,7 +1123,6 @@
       ],
       "sentence_number": 17,
       "critical_target": "娥",
-      "new_sentence": true,
       "full_sentence": "但在转身的那刻，覃娥瞅到了一位老妇人。"
     },
     {
@@ -1246,7 +1240,6 @@
         ]
       ],
       "sentence_number": 19,
-      "new_sentence": true,
       "critical_target": "憎",
       "full_sentence": "鲇子，爱变憎——究竟为何"
     },
@@ -1654,7 +1647,6 @@
       ],
       "sentence_number": 25,
       "critical_target": "宛",
-      "new_sentence": true,
       "full_sentence": "他悄悄对参加了救援小组的莫宛航说道。"
     },
     {
@@ -1814,7 +1806,6 @@
       ],
       "sentence_number": 28,
       "critical_target": "红",
-      "new_sentence": true,
       "full_sentence": "这就是迟红娟思想变化的整个过程。"
     },
     {
@@ -2234,7 +2225,6 @@
       ],
       "sentence_number": 35,
       "critical_target": "梓",
-      "new_sentence": true,
       "full_sentence": "张琳使劲地点了点头，然后就让陈梓潼举起手机照着她的眼睛。"
     },
     {
@@ -2279,7 +2269,6 @@
         ]
       ],
       "sentence_number": 36,
-      "new_sentence": true,
       "critical_target": "悉",
       "full_sentence": "我从此变得多悉善感起来。"
     },
@@ -2354,7 +2343,6 @@
       ],
       "sentence_number": 37,
       "critical_target": "铭",
-      "new_sentence": true,
       "full_sentence": "然后，很动情的将杨晓铭的遭遇娓娓道来。"
     },
     {
@@ -2432,7 +2420,6 @@
       ],
       "sentence_number": 38,
       "critical_target": "昭",
-      "new_sentence": true,
       "full_sentence": "告别了田老板，陈昭匆匆来到村头的小山包下。"
     },
     {
@@ -2570,7 +2557,6 @@
         ]
       ],
       "sentence_number": 40,
-      "new_sentence": true,
       "critical_target": "活",
       "full_sentence": "水鱼还是活的呢。"
     },
@@ -2961,7 +2947,6 @@
         ]
       ],
       "sentence_number": 46,
-      "new_sentence": true,
       "critical_target": "秧",
       "full_sentence": "这时已是晚春四月，在田中做秧母田的人很多。"
     },
@@ -3210,7 +3195,6 @@
         ]
       ],
       "sentence_number": 50,
-      "new_sentence": true,
       "critical_target": "湾",
       "full_sentence": "摆渡的一家人笑湾了腰。"
     },
@@ -3301,7 +3285,6 @@
       ],
       "sentence_number": 51,
       "critical_target": "沐",
-      "new_sentence": true,
       "full_sentence": "叶峥把奶茶塞进沐之言手里，然后拦腰将她抱了起来。"
     },
     {
@@ -4044,7 +4027,6 @@
       ],
       "sentence_number": 61,
       "critical_target": "芬",
-      "new_sentence": true,
       "full_sentence": "可好景不长，一个人的出现彻底打破了芬水街原有的宁静。"
     },
     {
@@ -4094,7 +4076,6 @@
       ],
       "sentence_number": 62,
       "critical_target": "维",
-      "new_sentence": true,
       "full_sentence": "我和何维的关系微妙起来。"
     },
     {
@@ -4233,7 +4214,6 @@
       ],
       "sentence_number": 64,
       "critical_target": "央",
-      "new_sentence": true,
       "full_sentence": "我村王培华媳妇死了，央我去助忙。"
     },
     {
@@ -4762,7 +4742,6 @@
       ],
       "sentence_number": 72,
       "critical_target": "思",
-      "new_sentence": true,
       "full_sentence": "我们的时思寺是当今皇上敕封的。"
     },
     {
@@ -5027,7 +5006,6 @@
       ],
       "sentence_number": 76,
       "critical_target": "汶",
-      "new_sentence": true,
       "full_sentence": "很多人惊叹于霍汶希的眼光。"
     },
     {
@@ -5311,7 +5289,6 @@
         ]
       ],
       "sentence_number": 80,
-      "new_sentence": true,
       "critical_target": "挤",
       "full_sentence": "我说嫌挤打的可以吧。"
     },
@@ -5382,7 +5359,6 @@
       ],
       "sentence_number": 81,
       "critical_target": "昆",
-      "new_sentence": true,
       "full_sentence": "经过三天的精密准备，江昆终于踏上北上的列车。"
     },
     {
@@ -6189,7 +6165,6 @@
         ]
       ],
       "sentence_number": 92,
-      "new_sentence": true,
       "critical_target": "嗜",
       "full_sentence": "大家都知道这个苹果皮的毛病——嗜睡如命。"
     },
@@ -6308,7 +6283,6 @@
         ]
       ],
       "sentence_number": 94,
-      "new_sentence": true,
       "critical_target": "娟",
       "full_sentence": "那段时间，是娟悉心的照顾着我。"
     },
@@ -6370,7 +6344,6 @@
         ]
       ],
       "sentence_number": 95,
-      "new_sentence": true,
       "critical_target": "苑",
       "full_sentence": "唯独没有外号的是作为班主任的苑老师。"
     },
@@ -6562,7 +6535,6 @@
         ]
       ],
       "sentence_number": 98,
-      "new_sentence": true,
       "critical_target": "文",
       "full_sentence": "这就是这位文友的决定。"
     },

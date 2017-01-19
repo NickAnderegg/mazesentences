@@ -156,7 +156,7 @@ def get_sentences():
             trial['critical_target'] = critical
             trial['distractors'] = distractors
 
-            selector = Selector('http://192.168.1.150:9200/', 'chinese_simplified', 2, min_year=1980)
+            selector = Selector('http://192.168.25.150:9200/', 'chinese_simplified', 2, min_year=1980)
 
             sentences = selector.get_sentences(critical, max_sentences=1000)
 
@@ -227,8 +227,46 @@ def get_sentences():
         with trials_file.open('w', encoding='utf-8') as f:
             json.dump(trials, f, ensure_ascii=False, indent=2)
 
+def regenerate_distractors():
+    trials_file = _get_trials_file(increment=False)
+    new_trials_file = _get_trials_file()
+
+    with trials_file.open('r', encoding='utf-8') as f:
+        trials_list = json.load(f)
+        trials_list = trials_list['sentences']
+
+    trials = []
+    for t in trials_list:
+        trials.append({
+            key: value
+            for key, value in t.items()
+            if key != 'sentence'
+        })
+
+    trials = {'sentences': trials}
+
+    selector = Selector('http://192.168.25.150:9200/', 'chinese_simplified', 2, min_year=1980)
+    sentence_number = 0
+    for trial in trials['sentences']:
+        sentence_number += 1
+        trial['sentence_number'] = sentence_number
+
+        trial['sentence'] = selector.distractor_sentence(
+            trial['full_sentence'],
+            trial['critical_target']
+        )
+
+        # print(json.dumps(trials[sentence_number-1], indent=2, ensure_ascii=False))
+
+        print('Created trial #{}'.format(sentence_number))
+
+        with new_trials_file.open('w', encoding='utf-8') as f:
+            json.dump(trials, f, ensure_ascii=False, indent=2)
+
+    # print(json.dumps(trials[:3], indent=2, ensure_ascii=False))
+
 def _get_trials_file(increment=True):
-    trials_file = pathlib.Path('mazesentences/data/trials_v001.json')
+    trials_file = pathlib.Path('mazesentences/data/generated_trials/trials_v001.json')
     if increment is False:
         last_file = pathlib.Path(trials_file)
 
@@ -322,7 +360,7 @@ def generate_sample(n, choices=None):
             file_output.append('Target (cont.): {}\n'.format(target_sentence[1]))
             file_output.append('Alter. (cont.): {}\n\n'.format(distractor_sentence[1]))
 
-    sample_file = pathlib.Path('mazesentences/data/trial_samples{}.txt'.format(trials_file.stem[-5:]))
+    sample_file = pathlib.Path('mazesentences/data/trial_samples/trial_samples{}.txt'.format(trials_file.stem[-5:]))
     with sample_file.open('w', encoding='utf-8') as f:
         f.writelines(file_output)
 
@@ -338,13 +376,13 @@ def generate_sentences_raw():
     for trial in trials_list:
         file_output.append('Sentence: {}, Critical: {}\n{}~ {}\n\n'.format(trial['sentence_number'], trial['critical_target'], trial['sentence_number'], trial['full_sentence']))
 
-    sentences_file = pathlib.Path('mazesentences/data/sentences_raw{}.txt'.format(trials_file.stem[-5:]))
+    sentences_file = pathlib.Path('mazesentences/data/sentences_raw/sentences_raw{}.txt'.format(trials_file.stem[-5:]))
     with sentences_file.open('w', encoding='utf-8') as f:
         f.writelines(file_output)
 
 def recombine_sentences(n):
-    raw_file = pathlib.Path('mazesentences/data/sentences_raw_v{:0>3}.txt'.format(n))
-    translated_file = pathlib.Path('mazesentences/data/sentences_translated_v{:0>3}.txt'.format(n))
+    raw_file = pathlib.Path('mazesentences/data/sentences_raw/sentences_raw_v{:0>3}.txt'.format(n))
+    translated_file = pathlib.Path('mazesentences/data/sentences_translated/sentences_translated_v{:0>3}.txt'.format(n))
 
     with raw_file.open('r', encoding='utf-8') as f_raw:
         raw_lines = {}
@@ -360,7 +398,7 @@ def recombine_sentences(n):
                 num, sentence = tuple(line.strip().split('~ '))
                 translated_lines[int(num)] = sentence
 
-    combined_file = pathlib.Path('mazesentences/data/sentences_combined_v{:0>3}.txt'.format(n))
+    combined_file = pathlib.Path('mazesentences/data/sentences_combined/sentences_combined_v{:0>3}.txt'.format(n))
     with combined_file.open('w', encoding='utf-8') as f:
         for num in raw_lines:
             f.write('Sentence {:0>3}:\n{}\n{}\n\n'.format(num, raw_lines[num], translated_lines[num]))

@@ -32,7 +32,7 @@ Sentence: 11, Critical: 提
 11~ 冥的眼光变提犀利。
 
 Sentence: 12, Critical: 喃
-12~ 老板娘不再说什么了，只是不停地喃什么显灵啊求饶之类的话。
+12~ 老板娘不再说什么了，只是不停地呢喃什么显灵啊求饶之类的话。
 
 Sentence: 13, Critical: 促
 13~ 在母亲的推促下，进了洗手间洗脸。
@@ -294,4 +294,3 @@ Sentence: 98, Critical: 文
 
 Sentence: 99, Critical: 仲
 99~ 这两个人不分仲伯，谁去谁留还真不好说。
-
