@@ -388,6 +388,33 @@ class ElasticConnector(ElasticConnectorBase):
         return paired_sentence
 
     def tokenize_sentence(self, sentence):
+
+        # manual_tokens = []
+        #
+        # if '<' in sentence:
+        #     start_ix = 0
+        #     while start_ix < len(sentence) and start_ix != -1:
+        #         manual_tok_start = sentence.find('<', start_ix)
+        #         manual_tok_end = sentence.find('>', start_ix)
+        #
+        #         if manual_tok_start < manual_tok_end and manual_tok_start != -1:
+        #             manual_tokens.append((
+        #                 sentence[manual_tok_start + 1 : manual_tok_end],
+        #                 manual_tok_start + 1,
+        #                 manual_tok_end - (manual_tok_start+1)
+        #             ))
+        #         else:
+        #             start_ix = -1
+        #             break
+        #
+        #         start_ix = manual_tok_end + 1
+        #
+        #     print('Manual tokens marked:', sentence)
+        #     print('Manual tokens: ', manual_tokens)
+        #     sentence = sentence.replace('<', '').replace('>', '')
+        #
+        # print('To be tokenized: ', sentence)
+
         resp = requests.get(
             '{}/{}/_analyze'.format(self.database_url, self.index),
             data=bytearray(sentence, 'utf-8'),
@@ -444,6 +471,20 @@ class ElasticConnector(ElasticConnectorBase):
 
             prev_end = token['end_offset']
 
+        if len(manual_tokens) > 0:
+            for tok in manual_tokens:
+                if tok[0] in tokenized:
+                    continue
+                else:
+                    current_tok = 0
+                    char_count = 0
+                    while current_tok < len(manual_tokens):
+                        if len(manual_tokens[current_tok]) == 1:
+                            if manual_tokens[current_tok] in tok[0]:
+
+
+        # print('Tokenized: ', tokenized)
+        # quit()
         return tokenized
 
     def token_pos_dist(self, token, as_dict=False):
