@@ -471,16 +471,16 @@ class ElasticConnector(ElasticConnectorBase):
 
             prev_end = token['end_offset']
 
-        if len(manual_tokens) > 0:
-            for tok in manual_tokens:
-                if tok[0] in tokenized:
-                    continue
-                else:
-                    current_tok = 0
-                    char_count = 0
-                    while current_tok < len(manual_tokens):
-                        if len(manual_tokens[current_tok]) == 1:
-                            if manual_tokens[current_tok] in tok[0]:
+        # if len(manual_tokens) > 0:
+        #     for tok in manual_tokens:
+        #         if tok[0] in tokenized:
+        #             continue
+        #         else:
+        #             current_tok = 0
+        #             char_count = 0
+        #             while current_tok < len(manual_tokens):
+        #                 if len(manual_tokens[current_tok]) == 1:
+        #                     if manual_tokens[current_tok] in tok[0]:
 
 
         # print('Tokenized: ', tokenized)

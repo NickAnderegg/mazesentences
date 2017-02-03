@@ -36,7 +36,7 @@ from .stimulusprocessor import *
 import json
 
 def main():
-    # reprocess_trials()
+    reprocess_trials()
     # get_sentences()
     # _get_incomplete_sets()
     # generate_sample(10)
