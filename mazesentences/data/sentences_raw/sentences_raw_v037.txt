@@ -1,0 +1,294 @@
+Sentence: 1, Critical: 鸦
+1~ 她只是被别人穿过的衣，只是一块用过的布，只是一张涂了鸦的纸。
+
+Sentence: 2, Critical: 桂
+2~ 大家都知道那是我家宅院里的桂树开花了。
+
+Sentence: 3, Critical: 塘
+3~ 五年前他承包了村里的鱼塘，第二年就成了远近闻名的养鱼专业户。
+
+Sentence: 4, Critical: 钦
+4~ 小时侯我最钦敬信赖的人是舅舅。
+
+Sentence: 5, Critical: 思
+5~ 她的老哥百思不得其法。
+
+Sentence: 6, Critical: 桔
+6~ 果然，不远处一个桔红的身影浮了上来。
+
+Sentence: 7, Critical: 而
+7~ 他的声音低沉而沙哑。
+
+Sentence: 8, Critical: 哇
+8~ 也不知过了多久，宁冲终于哇的一声哭了起来。
+
+Sentence: 9, Critical: 红
+9~ 镇长脸一红，说出了事情的原委。
+
+Sentence: 10, Critical: 沐
+10~ 日子虽然过得苦，但母亲活泼开朗的性格却使我们如沐春风。
+
+Sentence: 11, Critical: 驻
+11~ 在这些人行进的同时，公园里的路人不禁驻足观看，议论纷纷。
+
+Sentence: 12, Critical: 钳
+12~ 因而，尽管它有铁钳般的嘴壳和锯齿一般的大腿。
+
+Sentence: 13, Critical: 纹
+13~ 他眉宇间的纹理依稀难忘
+
+Sentence: 14, Critical: 缉
+14~ 他很快得到上下的认可，升为缉毒中队的中队长。
+
+Sentence: 15, Critical: 硌
+15~ 再次醒来的时候，林木躺在一张床上，这张床很硬，硌得林木浑身生疼。
+
+Sentence: 16, Critical: 哟
+16~ 可怜的美琪痛得唉哟了一夜。
+
+Sentence: 17, Critical: 抬
+17~ 右腿软软的，抬不起来。
+
+Sentence: 18, Critical: 滥
+18~ 对于女子的情爱，专而不滥，诚而不欺。
+
+Sentence: 19, Critical: 仗
+19~ 没把握的仗我可是从不去打的哦。
+
+Sentence: 20, Critical: 脐
+20~ 还真有点象人类的露脐装，或三点式的短裤所展示的效果。
+
+Sentence: 21, Critical: 掸
+21~ 娘一边儿给他掸身上的雪，一边儿嗔怪着。
+
+Sentence: 22, Critical: 哦
+22~ 我可没忘了你哦，永远的朋友。
+
+Sentence: 23, Critical: 枉
+23~ 欺骗肉体和感情的男人枉为人！
+
+Sentence: 24, Critical: 吱
+24~ 这时，西屋的房门吱呀一声开了。
+
+Sentence: 25, Critical: 持
+25~ 如今，谢彦波也持相似的观点。
+
+Sentence: 26, Critical: 殃
+26~ 细看才知那人的裤子的确遭了殃，裤脚已经支离破碎成了几半。
+
+Sentence: 27, Critical: 根
+27~ 时钟的分针牵引着老板心中那根紧绷的弦。
+
+Sentence: 28, Critical: 守
+28~ 护士是病人生命真正的守护神。
+
+Sentence: 29, Critical: 悉
+29~ 还有一样，穆五爷热心慈善，除了吃用外，所赚银两悉数拿去帮助穷人。
+
+Sentence: 30, Critical: 浩
+30~ 美琪挽着允浩的胳膊开心地下了车。
+
+Sentence: 31, Critical: 慰
+31~ 老人的心稍微宽慰了一点。
+
+Sentence: 32, Critical: 枝
+32~ 它们就点缀在我们生活的枝头，穿插在我们平平淡淡的日子里。
+
+Sentence: 33, Critical: 嗲
+33~ 但禁不住我软磨硬泡、撒娇发嗲，他最后还是勉强同意了。
+
+Sentence: 34, Critical: 秘
+34~ 她在向他诡秘的微笑。
+
+Sentence: 35, Critical: 响
+35~ 下楼村里响起此起彼伏的鞭炮声。
+
+Sentence: 36, Critical: 铝
+36~ 这就是那家伙的反光铝盆的威力。
+
+Sentence: 37, Critical: 文
+37~ 这就是这位文友的决定。
+
+Sentence: 38, Critical: 治
+38~ 经她的手一治就好。
+
+Sentence: 39, Critical: 仪
+39~ 肖纯是个出了名的大孝子，还是许多女孩心仪暗恋的白马王子。
+
+Sentence: 40, Critical: 壬
+40~ 这年头，城里人时兴生态旅游，所以，到壬山村来游玩的人自然不少。
+
+Sentence: 41, Critical: 喃
+41~ 老板娘不再说什么了，只是不停地喃什么显灵啊求饶之类的话。
+
+Sentence: 42, Critical: 提
+42~ 国际会议上第一个提的菜是胡萝卜。
+
+Sentence: 43, Critical: 演
+43~ 更没有电影里演的那么曲折。
+
+Sentence: 44, Critical: 详
+44~ 小街和村子是城市里的另类，它们安静详和，鸡犬相闻。
+
+Sentence: 45, Critical: 蚝
+45~ 我吃的那些生蚝好像不大对劲！
+
+Sentence: 46, Critical: 俯
+46~ 又是在阳台，一个柳丝披肩的女孩俯在那里。
+
+Sentence: 47, Critical: 诘
+47~ 面对妻子、女儿的诘问，孤独剑宽慰地说。
+
+Sentence: 48, Critical: 吹
+48~ 我说妖精吹的是仙气。
+
+Sentence: 49, Critical: 棋
+49~ 大的举棋不定，半天也没落子。
+
+Sentence: 50, Critical: 训
+50~ 马戏团的训兽表演开始了。
+
+Sentence: 51, Critical: 芯
+51~ 雨菲苦丧着脸说，气门芯坏了。
+
+Sentence: 52, Critical: 健
+52~ 他的步履依旧矫健，只是他的眼睛茫然。
+
+Sentence: 53, Critical: 浊
+53~ 里面传来苍老浑浊的声音。
+
+Sentence: 54, Critical: 拒
+54~ 可惜都被她的冷漠给拒之门外。
+
+Sentence: 55, Critical: 溃
+55~ 在丢下遍地的尸体后，田鼠群再次溃退，消失在茫茫的山野之中。
+
+Sentence: 56, Critical: 倦
+56~ 我会陪她去上晚自习，倦了就到静静的花园里坐一会儿。
+
+Sentence: 57, Critical: 呷
+57~ 绕过海呷后，我们必须全速前进，靠近那条船，然后立即占领它。
+
+Sentence: 58, Critical: 沿
+58~ 三人打的沿阿亮回家的路追去。
+
+Sentence: 59, Critical: 仲
+59~ 这两个人不分仲伯，谁去谁留还真不好说。
+
+Sentence: 60, Critical: 蹭
+60~ 总是在左邻右舍蹭点吃的，勉强维持生活。
+
+Sentence: 61, Critical: 漆
+61~ 家具上面的漆都快掉完了，又黑又脏。
+
+Sentence: 62, Critical: 息
+62~ 夜，悄无声息的来了。
+
+Sentence: 63, Critical: 岗
+63~ 只是个把小时的时间，乱石岗上的杂草灌木就变成一片灰烬。
+
+Sentence: 64, Critical: 熬
+64~ 又是一个难熬的夜晚。
+
+Sentence: 65, Critical: 央
+65~ 校运动会，斯思央我为她男友加油。
+
+Sentence: 66, Critical: 眩
+66~ 语毕，只见那只手幻化成七彩眩光，慢慢的化作无数萤火虫离去。
+
+Sentence: 67, Critical: 铰
+67~ 她刚带领学生们用薄薄的闪光彩纸铰完雪花。
+
+Sentence: 68, Critical: 非
+68~ 能在这里经常出入的人非富即贵。
+
+Sentence: 69, Critical: 茬
+69~ 起初谁也没理他的茬，都知道他又在那设套儿。
+
+Sentence: 70, Critical: 促
+70~ 在母亲的推促下，进了洗手间洗脸。
+
+Sentence: 71, Critical: 径
+71~ 飕的一声，径向羿的咽喉飞过来。
+
+Sentence: 72, Critical: 栖
+72~ 灵山是上古时期的仙山，山顶上有一棵梧桐树，树上栖着一只彩凤。
+
+Sentence: 73, Critical: 昏
+73~ 那天晚上他的眼睛在昏黄的路灯的光晕里亮闪闪的。
+
+Sentence: 74, Critical: 王
+74~ 一个消息传入了他的耳朵，新的王诞生了。
+
+Sentence: 75, Critical: 苛
+75~ 父亲回信没有严厉地苛责她，而是给她讲述了自己年轻时在部队的故事。
+
+Sentence: 76, Critical: 唱
+76~ 鬼知道当时我唱的是么子歌。
+
+Sentence: 77, Critical: 荧
+77~ 一句广告语十分醒目地映在荧屏上：学习真像玩游戏。
+
+Sentence: 78, Critical: 噪
+78~ 灯光越来越近，已经能听到噪杂的人声。
+
+Sentence: 79, Critical: 滴
+79~ 张海涛久久的看着已经念完的信，眼泪一滴一滴的滴在信纸上。
+
+Sentence: 80, Critical: 倚
+80~ 他的椅边斜倚着双拐。
+
+Sentence: 81, Critical: 僧
+81~ 安分守己潜心苦修的僧道，从来也没见有谁修得正果成得星宿之位。
+
+Sentence: 82, Critical: 温
+82~ 他听了，流下温软的一滴泪。
+
+Sentence: 83, Critical: 娥
+83~ 真是比窦娥还冤！
+
+Sentence: 85, Critical: 芬
+85~ 想着想着，蒋玉芬的眼泪不停地流了下来。
+
+Sentence: 86, Critical: 嗜
+86~ 夫妇俩听到门外人声嗜杂于是出门查看，原来是官府人众来到门前。
+
+Sentence: 88, Critical: 湾
+88~ 摆渡的一家人笑湾了腰。
+
+Sentence: 89, Critical: 维
+89~ 王海成的地毯式维权，在全国引起了极大关注。
+
+Sentence: 90, Critical: 宛
+90~ 江碧寒小吃了一惊，立刻将目光移到莫宛航的身上。
+
+Sentence: 91, Critical: 苑
+91~ 带走了所有的东西，袁苑送她的所有东西，包括她的衣服。
+
+Sentence: 92, Critical: 柱
+92~ 玉莲浑身颤抖着，想挣脱金柱的手。
+
+Sentence: 93, Critical: 汶
+93~ 一来代表中原人民，二来代表经历过汶川地震的四川人民。
+
+Sentence: 94, Critical: 昆
+94~ 这让马昆又惊又喜，因为他一直在寻找朱馨的墓穴。
+
+Sentence: 95, Critical: 梓
+95~ 我与吴雅慧闲聊时，她的弟弟吴梓杰正在地下室布展。
+
+Sentence: 96, Critical: 挤
+96~ 他浓密的体毛，是我们一帮关系不错的兄弟姐妹挤兑的话柄。
+
+Sentence: 97, Critical: 娟
+97~ 简易呼吸器帮了付丽娟的大忙！
+
+Sentence: 98, Critical: 活
+98~ 毕竟，那是一条鲜活的生命啊！
+
+Sentence: 99, Critical: 昭
+99~ 他一拳轻轻的锤在琼昭的肩上，此时无言的对白，更胜千言万语。
+
+Sentence: 100, Critical: 铭
+100~ 翻开那厚重的书册，品着铭之芳香。
+

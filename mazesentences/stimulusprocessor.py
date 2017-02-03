@@ -46,6 +46,7 @@ def reprocess_trials():
         trials_list = trials_list['sentences']
 
     bad_trials = []
+    rejected_sentences = []
     checked_stimuli = set()
     for ix, trial in enumerate(trials_list):
 
@@ -68,6 +69,7 @@ def reprocess_trials():
 
         if 'new_sentence' in trial and trial['new_sentence'] is True:
             bad_trials.append(ix)
+            rejected_sentences.append(trial['full_sentence'])
             print('Sentence #{} marked for regeneration'.format(ix+1))
             continue
 
@@ -85,6 +87,10 @@ def reprocess_trials():
 
     with trials_file.open('w', encoding='utf-8') as f:
         json.dump(trials, f, ensure_ascii=False, indent=2)
+
+    rejected_sentences_file = pathlib.Path('mazesentences/data/rejected_sentences.txt')
+    with rejected_sentences_file.open('a', encoding='utf-8') as f:
+        f.write('\n'.join(rejected_sentences) + '\n')
 
     print('Dumped {} trials...'.format(len(bad_trials)))
 
@@ -157,6 +163,7 @@ def get_sentences():
             trial['distractors'] = distractors
 
             selector = Selector('http://192.168.25.150:9200/', 'chinese_simplified', 2, min_year=1980)
+            # selector = Selector('http://home.anderegg.io:9292/', 'chinese_simplified', 2, min_year=1980)
 
             sentences = selector.get_sentences(critical, max_sentences=1000)
 
@@ -246,6 +253,7 @@ def regenerate_distractors():
     trials = {'sentences': trials}
 
     selector = Selector('http://192.168.25.150:9200/', 'chinese_simplified', 2, min_year=1980)
+    # selector = Selector('http://home.anderegg.io:9292/', 'chinese_simplified', 2, min_year=1980)
     sentence_number = 0
     for trial in trials['sentences']:
         sentence_number += 1

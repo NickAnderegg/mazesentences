@@ -5,6 +5,7 @@ import unicodedata
 import time
 import random
 from operator import itemgetter, attrgetter
+import pathlib
 
 from .elasticconnector import ElasticConnector
 
@@ -128,6 +129,15 @@ class Selector(ElasticConnector):
         ])
         sentence_info = []
         process_start = time.perf_counter()
+
+        rejected_sentences_file = pathlib.Path('mazesentences/data/rejected_sentences.txt')
+        rejected_sentences = []
+        with rejected_sentences_file.open('r', encoding='utf-8') as f:
+            for line in f:
+                rejected_sentences.append(line)
+        rejected_sentences = set(rejected_sentences)
+        # print('Read {} rejected sentences...'.format(len(rejected_sentences)))
+
         for sentence in sentences:
             if (len(sentence_info) + rejected) % 100 == 0:
                 print('Processed {}/{} sentences for {} ({} rejected) in {:.2f}s...'.format((len(sentence_info)+rejected), len(sentences), word, rejected, (time.perf_counter()-process_start)))
@@ -153,6 +163,11 @@ class Selector(ElasticConnector):
 
                 quick_tokenized.append(token['token'])
                 # prev_end = token['end_offset']
+
+            if sentence in rejected_sentences:
+                rejected += 1
+                print('Rejecting previously rejected sentence: {}'.format(sentence))
+                continue
 
             if len(set(list(sentence)) & prohibited_chars) > 0:
                 # print(set(list(sentence)))
