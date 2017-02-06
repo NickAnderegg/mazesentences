@@ -336,6 +336,7 @@ def generate_sample(n, choices=None):
         file_output.append('Full sentence: {}\n\n'.format(trial['full_sentence']))
         target_sentence = []
         distractor_sentence = []
+        print('Arranging sententence', trial['sentence_number'])
         for pair in trial['sentence']:
             if 'Ｘ' in pair[1]:
                 pair[1] = ''.join(['Ｘ']*len(pair[0]))

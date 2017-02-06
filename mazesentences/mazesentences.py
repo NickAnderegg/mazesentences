@@ -36,13 +36,13 @@ from .stimulusprocessor import *
 import json
 
 def main():
-    reprocess_trials()
+    # reprocess_trials()
     # get_sentences()
     # _get_incomplete_sets()
-    # generate_sample(10)
+    generate_sample(80)
     # generate_sentences_raw()
     # recombine_sentences(25)
-    regenerate_distractors()
+    # regenerate_distractors()
 
 if __name__ == "__main__":
     main()
