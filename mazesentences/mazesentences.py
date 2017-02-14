@@ -39,7 +39,7 @@ def main():
     # reprocess_trials()
     # get_sentences()
     # _get_incomplete_sets()
-    generate_sample(80)
+    generate_sample(80, rand=False)
     # generate_sentences_raw()
     # recombine_sentences(25)
     # regenerate_distractors()

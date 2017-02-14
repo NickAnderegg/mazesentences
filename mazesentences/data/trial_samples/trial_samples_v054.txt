@@ -1,0 +1,795 @@
+========
+Sample Trials:
+========
+--------
+Trial: 1
+Critical: 呷 / Distractors – Both: 岬 | Orth: 听 | Phon: 匣 | Diff: 隠
+
+Full sentence: 绕过海呷后，我们必须全速前进，靠近那条船，然后立即占领它。
+
+Target: 绕 | 过 | 海 | 呷 | 后, | 我们 | 必须 | 全速前进, | 靠近 | 那 | 条 | 船,  ->
+Alter.: Ｘ | 就 | 为 | ＃ | 到, | 有关 | 最大 | 澳大利亚, | 橡皮 | 使 | 者 | 某,  ->
+
+Target (cont.): 然后 | 立即 | 占领 | 它.
+Alter. (cont.): 出来 | 心理 | 地方 | 只.
+
+--------
+Trial: 2
+Critical: 熬 / Distractors – Both: 獒 | Orth: 熊 | Phon: 凹 | Diff: 痉
+
+Full sentence: 又是一个难熬的夜晚。
+
+Target: 又是 | 一个 | 难 | 熬 | 的 | 夜晚.
+Alter.: ＸＸ | 相互 | 也 | ＃ | 这 | 造成.
+
+--------
+Trial: 3
+Critical: 央 / Distractors – Both: 泱 | Orth: 沸 | Phon: 佯 | Diff: 蓟
+
+Full sentence: 校运动会，她央我为她男友加油。
+
+Target: 校 | 运动 | 会, | 她 | 央 | 我 | 为 | 她 | 男友 | 加油.
+Alter.: Ｘ | 所谓 | 请, | 这 | ＃ | 较 | 与 | 只 | 政府 | 思想.
+
+--------
+Trial: 4
+Critical: 嗜 / Distractors – Both: 嗤 | Orth: 嗡 | Phon: 式 | Diff: 阳
+
+Full sentence: 夫妇俩听到门外人声嗜杂于是出门查看，原来是官府人众来到门前。
+
+Target: 夫妇 | 俩 | 听到 | 门外 | 人声 | 嗜 | 杂 | 于是 | 出门 | 查看, | 原来是 | 官 ->
+Alter.: ＸＸ | 该 | 其它 | 依照 | 主义 | ＃ | 最 | 任何 | 质量 | 部门, | 委员会 | 贸 ->
+
+Target (cont.): | 人 | 众 | 来到 | 门前.
+Alter. (cont.): | 但 | 的 | 然后 | 中心.
+
+--------
+Trial: 5
+Critical: 噪 / Distractors – Both: 燥 | Orth: 嘤 | Phon: 赵 | Diff: 音
+
+Full sentence: 灯光越来越近，已经能听到噪杂的人声。
+
+Target: 灯光 | 越来越 | 近, | 已经 | 能 | 听到 | 噪 | 杂 | 的 | 人声.
+Alter.: ＸＸ | 为什么 | 也, | 按照 | 党 | 价值 | ＃ | 各 | 每 | 只有.
+
+--------
+Trial: 6
+Critical: 塘 / Distractors – Both: 搪 | Orth: 揖 | Phon: 尝 | Diff: 鹬
+
+Full sentence: 五年前他承包了村里的鱼塘，第二年就成了远近闻名的养鱼专业户。
+
+Target: 五年 | 前 | 他 | 承包 | 了 | 村里 | 的 | 鱼 | 塘, | 第二 | 年 | 就 | 成了 ->
+Alter.: ＸＸ | 是 | 对 | 我国 | 每 | 这些 | 国 | 而 | ＃, | 这样 | 着 | 这 | 分子 ->
+
+Target (cont.):  远近 | 闻名 | 的 | 养 | 鱼 | 专业 | 户.
+Alter. (cont.):  保护 | 部门 | 与 | 可 | 另 | 认为 | 即.
+
+--------
+Trial: 7
+Critical: 响 / Distractors – Both: 晌 | Orth: 呐 | Phon: 抢 | Diff: 邬
+
+Full sentence: 下楼村里响起此起彼伏的鞭炮声。
+
+Target: 下 | 楼 | 村里 | 响 | 起 | 此起彼伏 | 的 | 鞭炮声.
+Alter.: Ｘ | 也 | 大力 | ＃ | 按 | 另一方面 | 日 | 进一步.
+
+--------
+Trial: 8
+Critical: 硌 / Distractors – Both: 铬 | Orth: 铵 | Phon: 刻 | Diff: 臃
+
+Full sentence: 再次醒来的时候，他躺在一张床上，这张床很硬，硌得他浑身生疼。
+
+Target: 再次 | 醒来 | 的 | 时候, | 他 | 躺在 | 一张 | 床上, | 这 | 张 | 床 | 很 | ->
+Alter.: ＸＸ | 农民 | 人 | 而且, | 和 | 所有 | 情况 | 就是, | 月 | 为 | 更 | 到 | ->
+
+Target (cont.): , | 硌 | 得 | 他 | 浑身 | 生 | 疼.
+Alter. (cont.): , | ＃ | 于 | 三 | 私有 | 性 | 又.
+
+--------
+Trial: 9
+Critical: 治 / Distractors – Both: 沼 | Orth: 沿 | Phon: 置 | Diff: 阉
+
+Full sentence: 经她的手一治就好。
+
+Target: 经 | 她的 | 手 | 一 | 治 | 就好.
+Alter.: Ｘ | 任何 | 在 | 谁 | ＃ | 按照.
+
+--------
+Trial: 10
+Critical: 苛 / Distractors – Both: 荷 | Orth: 苑 | Phon: 抠 | Diff: 厌
+
+Full sentence: 父亲回信没有严厉地苛责她，而是给她讲述了自己年轻时在部队的故事。
+
+Target: 父亲 | 回信 | 没有 | 严厉 | 地 | 苛 | 责 | 她, | 而是 | 给 | 她 | 讲述 |  ->
+Alter.: ＸＸ | 制度 | 思想 | 但是 | 都 | ＃ | 但 | 也, | 方法 | 权 | 为 | 地区 |  ->
+
+Target (cont.): | 自己 | 年轻 | 时 | 在 | 部队 | 的 | 故事.
+Alter. (cont.): | 知道 | 贸易 | 较 | 这 | 以来 | 竟 | 结束.
+
+--------
+Trial: 11
+Critical: 浊 / Distractors – Both: 烛 | Orth: 冲 | Phon: 酌 | Diff: 庵
+
+Full sentence: 里面传来苍老浑浊的声音。
+
+Target: 里面 | 传来 | 苍老 | 浑 | 浊 | 的 | 声音.
+Alter.: ＸＸ | 需求 | 工业 | 是 | ＃ | 有 | 指出.
+
+--------
+Trial: 12
+Critical: 仗 / Distractors – Both: 丈 | Orth: 仪 | Phon: 障 | Diff: 壹
+
+Full sentence: 没把握的仗我可是从不去打的哦。
+
+Target: 没 | 把握 | 的 | 仗 | 我 | 可是 | 从 | 不去 | 打 | 的 | 哦.
+Alter.: Ｘ | 古典 | 仅 | ＃ | 月 | 因为 | 量 | 重要 | 中 | 才 | 是.
+
+--------
+Trial: 13
+Critical: 桂 / Distractors – Both: 桧 | Orth: 佳 | Phon: 晷 | Diff: 儿
+
+Full sentence: 大家都知道那是我家宅院里的桂树开花了。
+
+Target: 大家 | 都 | 知道 | 那是 | 我家 | 宅院 | 里 | 的 | 桂 | 树 | 开花 | 了.
+Alter.: ＸＸ | 权 | 世界 | 联合 | 军用 | 公司 | 有 | 术 | ＃ | 为 | 上述 | 就.
+
+--------
+Trial: 14
+Critical: 蹭 / Distractors – Both: 噌 | Orth: 嗳 | Phon: 成 | Diff: 悦
+
+Full sentence: 总是在左邻右舍蹭点吃的，勉强维持生活。
+
+Target: 总是 | 在 | 左 | 邻 | 右 | 舍 | 蹭 | 点 | 吃 | 的, | 勉强 | 维持 | 生活.
+Alter.: ＸＸ | 都 | 并 | 很 | 此 | 怎 | ＃ | 月 | 届 | 由, | 其他 | 主义 | 不过.
+
+--------
+Trial: 15
+Critical: 演 / Distractors – Both: 淹 | Orth: 滴 | Phon: 衍 | Diff: 驱
+
+Full sentence: 更没有电影里演的那么曲折。
+
+Target: 更 | 没有 | 电影 | 里 | 演 | 的 | 那么 | 曲折.
+Alter.: Ｘ | 问题 | 重新 | 另 | ＃ | 又 | 为了 | 除了.
+
+--------
+Trial: 16
+Critical: 僧 / Distractors – Both: 憎 | Orth: 懊 | Phon: 铛 | Diff: 轧
+
+Full sentence: 安分守己潜心苦修的僧道，从来也没见有谁修得正果成得星宿之位。
+
+Target: 安分守己 | 潜心 | 苦修 | 的 | 僧 | 道, | 从来 | 也没 | 见 | 有 | 谁 | 修得  ->
+Alter.: ＸＸＸＸ | 国家 | 特别 | 那 | ＃ | 是, | 因为 | 价值 | 较 | 史 | 这 | 政治  ->
+
+Target (cont.): 正果 | 成 | 得 | 星宿 | 之 | 位.
+Alter. (cont.): 直到 | 年 | 在 | 杀伤 | 对 | 从.
+
+--------
+Trial: 17
+Critical: 弯 / Distractors – Both: 温 | Orth: 滞 | Phon: 剜 | Diff: 讫
+
+Full sentence: 摆渡的一家人笑弯了腰。
+
+Target: 摆渡 | 的 | 一家 | 人 | 笑 | 弯 | 了 | 腰.
+Alter.: ＸＸ | 在 | 懂得 | 如 | 所 | ＃ | 另 | 各.
+
+--------
+Trial: 18
+Critical: 红 / Distractors – Both: 讧 | Orth: 仁 | Phon: 控 | Diff: 淤
+
+Full sentence: 镇长脸一红，说出了事情的原委。
+
+Target: 镇长 | 脸 | 一 | 红, | 说出 | 了 | 事情 | 的 | 原委.
+Alter.: ＸＸ | 民 | 各 | ＃, | 必须 | 说 | 因此 | 观 | 按照.
+
+--------
+Trial: 19
+Critical: 径 / Distractors – Both: 经 | Orth: 侄 | Phon: 擤 | Diff: 瑶
+
+Full sentence: 飕的一声，径向他的咽喉飞过来。
+
+Target: 飕 | 的 | 一声, | 径 | 向 | 他的 | 咽喉 | 飞过来.
+Alter.: Ｘ | 使 | 还是, | ＃ | 因 | 因为 | 充分 | 进一步.
+
+--------
+Trial: 20
+Critical: 岗 / Distractors – Both: 冈 | Orth: 区 | Phon: 港 | Diff: 意
+
+Full sentence: 只是个把小时的时间，乱石岗上的杂草灌木就变成一片灰烬。
+
+Target: 只是 | 个 | 把 | 小时 | 的 | 时间, | 乱 | 石 | 岗 | 上 | 的 | 杂草 | 灌木 ->
+Alter.: ＸＸ | 谁 | 但 | 无论 | 既 | 没有, | 与 | 权 | ＃ | 各 | 人 | 由于 | 最大 ->
+
+Target (cont.):  就 | 变成 | 一片 | 灰烬.
+Alter. (cont.):  还 | 条件 | 主义 | 互相.
+
+--------
+Trial: 21
+Critical: 秘 / Distractors – Both: 铋 | Orth: 秧 | Phon: 俪 | Diff: 璜
+
+Full sentence: 她在向他诡秘的微笑。
+
+Target: 她在 | 向 | 他 | 诡 | 秘 | 的 | 微笑.
+Alter.: ＸＸ | 较 | 都 | 这 | ＃ | 对 | 必须.
+
+--------
+Trial: 22
+Critical: 而 / Distractors – Both: 耳 | Orth: 两 | Phon: 尔 | Diff: 叫
+
+Full sentence: 他的声音低沉而沙哑。
+
+Target: 他的 | 声音 | 低沉 | 而 | 沙哑.
+Alter.: ＸＸ | 没有 | 市场 | ＃ | 美国.
+
+--------
+Trial: 23
+Critical: 温 / Distractors – Both: 揾 | Orth: 揭 | Phon: 问 | Diff: 哉
+
+Full sentence: 他听了，流下温软的一滴泪。
+
+Target: 他 | 听 | 了, | 流下 | 温 | 软 | 的 | 一滴 | 泪.
+Alter.: Ｘ | 万 | 才, | 城市 | ＃ | 则 | 使 | 引起 | 更.
+
+--------
+Trial: 24
+Critical: 哇 / Distractors – Both: 蛙 | Orth: 桂 | Phon: 挖 | Diff: 郡
+
+Full sentence: 也不知过了多久，他终于哇的一声哭了起来。
+
+Target: 也 | 不知 | 过 | 了 | 多久, | 他 | 终于 | 哇 | 的 | 一声 | 哭了 | 起来.
+Alter.: Ｘ | 国家 | 电 | 是 | 当然, | 者 | 什么 | ＃ | 在 | 应该 | 其他 | 为了.
+
+--------
+Trial: 25
+Critical: 昏 / Distractors – Both: 昆 | Orth: 杳 | Phon: 獾 | Diff: 捱
+
+Full sentence: 那天晚上他的眼睛在昏黄的路灯的光晕里亮闪闪的。
+
+Target: 那天 | 晚上 | 他的 | 眼睛 | 在 | 昏 | 黄 | 的 | 路灯 | 的 | 光 | 晕 | 里  ->
+Alter.: ＸＸ | 任何 | 部门 | 逐步 | 日 | ＃ | 也 | 又 | 感到 | 各 | 这 | 某 | 不  ->
+
+Target (cont.): 亮闪闪 | 的.
+Alter. (cont.): 农产品 | 法.
+
+--------
+Trial: 26
+Critical: 纹 / Distractors – Both: 炆 | Orth: 纸 | Phon: 丸 | Diff: 序
+
+Full sentence: 他眉宇间的纹理依稀难忘
+
+Target: 他 | 眉宇 | 间 | 的 | 纹 | 理 | 依稀 | 难忘.
+Alter.: Ｘ | 弱势 | 年 | 都 | ＃ | 从 | 全体 | 日本.
+
+--------
+Trial: 27
+Critical: 桔 / Distractors – Both: 洁 | Orth: 桉 | Phon: 攫 | Diff: 蕴
+
+Full sentence: 果然，不远处一个桔红的身影浮了上来。
+
+Target: 果然, | 不 | 远处 | 一个 | 桔 | 红的 | 身影 | 浮 | 了 | 上来.
+Alter.: ＸＸ, | 是 | 中型 | 关系 | ＃ | 已经 | 因为 | 水 | 各 | 由于.
+
+--------
+Trial: 28
+Critical: 促 / Distractors – Both: 俗 | Orth: 捉 | Phon: 蹙 | Diff: 剜
+
+Full sentence: 在母亲的推促下，进了洗手间洗脸。
+
+Target: 在 | 母亲 | 的 | 推 | 促 | 下, | 进 | 了 | 洗手间 | 洗 | 脸.
+Alter.: Ｘ | 就是 | 谨 | 即 | ＃ | 每, | 就 | 仍 | 进一步 | 日 | 还.
+
+--------
+Trial: 29
+Critical: 守 / Distractors – Both: 寿 | Orth: 安 | Phon: 首 | Diff: 臃
+
+Full sentence: 护士是病人生命真正的守护神。
+
+Target: 护士 | 是 | 病人 | 生命 | 真正 | 的 | 守 | 护 | 神.
+Alter.: ＸＸ | 各 | 关于 | 哪些 | 上述 | 也 | ＃ | 较 | 想.
+
+--------
+Trial: 30
+Critical: 驻 / Distractors – Both: 柱 | Orth: 往 | Phon: 述 | Diff: 严
+
+Full sentence: 在这些人行进的同时，公园里的路人不禁驻足观看，议论纷纷。
+
+Target: 在 | 这些 | 人 | 行进 | 的 | 同时, | 公园 | 里 | 的 | 路人 | 不禁 | 驻 |  ->
+Alter.: Ｘ | 上书 | 按 | 问题 | 也 | 然而, | 一切 | 如 | 院 | 重要 | 必须 | ＃ |  ->
+
+Target (cont.): | 观看, | 议论 | 纷纷.
+Alter. (cont.): | 不但, | 公司 | 技术.
+
+--------
+Trial: 31
+Critical: 棋 / Distractors – Both: 骐 | Orth: 验 | Phon: 脐 | Diff: 痒
+
+Full sentence: 他举棋不定，半天也没落子。
+
+Target: 他 | 举 | 棋 | 不定, | 半天 | 也 | 没落 | 子.
+Alter.: Ｘ | 有 | ＃ | 通过, | 历史 | 人 | 人民 | 最.
+
+--------
+Trial: 32
+Critical: 蚝 / Distractors – Both: 耗 | Orth: 蚊 | Phon: 勺 | Diff: 揾
+
+Full sentence: 我吃的那些生蚝好像不大对劲！
+
+Target: 我 | 吃 | 的 | 那些 | 生 | 蚝 | 好像 | 不大 | 对 | 劲.
+Alter.: Ｘ | 按 | 由 | 通过 | 和 | ＃ | 经济 | 产业 | 中 | 有.
+
+--------
+Trial: 33
+Critical: 芯 / Distractors – Both: 芹 | Orth: 苇 | Phon: 欣 | Diff: 液
+
+Full sentence: 她苦丧着脸说，气门芯坏了。
+
+Target: 她 | 苦 | 丧 | 着 | 脸 | 说, | 气门 | 芯 | 坏 | 了.
+Alter.: Ｘ | 这 | 各 | 就 | 那 | 日, | 能够 | ＃ | 是 | 即.
+
+--------
+Trial: 34
+Critical: 枝 / Distractors – Both: 肢 | Orth: 技 | Phon: 值 | Diff: 雁
+
+Full sentence: 它们就点缀在我们生活的枝头，穿插在我们平平淡淡的日子里。
+
+Target: 它们 | 就 | 点缀 | 在 | 我们 | 生活 | 的 | 枝 | 头, | 穿插 | 在 | 我们 |  ->
+Alter.: ＸＸ | 月 | 人员 | 这 | 关于 | 私有 | 大 | ＃ | 更, | 相互 | 还 | 也是 |  ->
+
+Target (cont.):  | 淡淡的 | 日子 | 里.
+Alter. (cont.):  | 国民党 | 整个 | 性.
+
+--------
+Trial: 35
+Critical: 文 / Distractors – Both: 汶 | Orth: 这 | Phon: 烷 | Diff: 钙
+
+Full sentence: 这就是这位文友的决定。
+
+Target: 这 | 就是 | 这位 | 文 | 友 | 的 | 决定.
+Alter.: Ｘ | 什么 | 也是 | ＃ | 才 | 亦 | 如何.
+
+--------
+Trial: 36
+Critical: 枉 / Distractors – Both: 旺 | Orth: 析 | Phon: 亡 | Diff: 狙
+
+Full sentence: 欺骗肉体和感情的男人枉为人！
+
+Target: 欺骗 | 肉体 | 和 | 感情 | 的 | 男人 | 枉 | 为人.
+Alter.: ＸＸ | 由于 | 看 | 从此 | 该 | 仍然 | ＃ | 代表.
+
+--------
+Trial: 37
+Critical: 王 / Distractors – Both: 汪 | Orth: 主 | Phon: 网 | Diff: 骥
+
+Full sentence: 一个消息传入了他的耳朵，新的王诞生了。
+
+Target: 一个 | 消息 | 传 | 入 | 了 | 他的 | 耳朵, | 新的 | 王 | 诞生 | 了.
+Alter.: ＸＸ | 任何 | 吨 | 这 | 但 | 以上 | 因为, | 技术 | ＃ | 逐步 | 家.
+
+--------
+Trial: 38
+Critical: 倦 / Distractors – Both: 卷 | Orth: 倚 | Phon: 剑 | Diff: 讴
+
+Full sentence: 我会陪她去上晚自习，倦了就到静静的花园里坐一会儿。
+
+Target: 我 | 会 | 陪 | 她 | 去 | 上 | 晚 | 自 | 习, | 倦 | 了 | 就到 | 静静 |  ->
+Alter.: Ｘ | 按 | 家 | 大 | 书 | 总 | 都 | 指 | 将, | ＃ | 在 | 因此 | 包括 |  ->
+
+Target (cont.): | 花园 | 里 | 坐 | 一 | 会 | 儿.
+Alter. (cont.): | 进行 | 少 | 这 | 各 | 还 | 最.
+
+--------
+Trial: 39
+Critical: 息 / Distractors – Both: 悉 | Orth: 恙 | Phon: 戌 | Diff: 院
+
+Full sentence: 夜，悄无声息的来了。
+
+Target: 夜, | 悄 | 无声 | 息 | 的 | 来 | 了.
+Alter.: Ｘ, | 某 | 内容 | ＃ | 另 | 这 | 按.
+
+--------
+Trial: 40
+Critical: 详 / Distractors – Both: 诠 | Orth: 栓 | Phon: 乾 | Diff: 抑
+
+Full sentence: 小街和村子是城市里的另类，它们安静详和，鸡犬相闻。
+
+Target: 小街 | 和 | 村子 | 是 | 城市 | 里 | 的 | 另 | 类, | 它们 | 安静 | 详 | 和 ->
+Alter.: ＸＸ | 较 | 就是 | 于 | 高等 | 这 | 业 | 到 | 地, | 结束 | 农村 | ＃ | 但 ->
+
+Target (cont.): | 鸡犬相闻.
+Alter. (cont.): | 以夷制夷.
+
+--------
+Trial: 41
+Critical: 眩 / Distractors – Both: 铉 | Orth: 铱 | Phon: 渲 | Diff: 迂
+
+Full sentence: 语毕，只见那只手幻化成七彩眩光，慢慢的化作无数萤火虫离去。
+
+Target: 语 | 毕, | 只 | 见 | 那只 | 手 | 幻 | 化成 | 七彩 | 眩 | 光, | 慢慢 | 的 ->
+Alter.: Ｘ | 按, | 部 | 公 | 甚至 | 却 | 曾 | 由于 | 指出 | ＃ | 即, | 作出 | 日 ->
+
+Target (cont.):  化作 | 无数 | 萤火 | 虫 | 离去.
+Alter. (cont.):  就是 | 其他 | 迅速 | 另 | 以来.
+
+--------
+Trial: 42
+Critical: 掸 / Distractors – Both: 弹 | Orth: 禅 | Phon: 袒 | Diff: 郁
+
+Full sentence: 娘一边儿给他掸身上的雪，一边儿嗔怪着。
+
+Target: 娘 | 一边 | 儿 | 给 | 他 | 掸 | 身上 | 的 | 雪, | 一边 | 儿 | 嗔 | 怪 | 着.
+Alter.: Ｘ | 耳机 | 史 | 亦 | 不 | ＃ | 政治 | 市 | 都, | 历史 | 页 | 严 | 中 | 很.
+
+--------
+Trial: 43
+Critical: 拒 / Distractors – Both: 巨 | Orth: 柜 | Phon: 剧 | Diff: 剜
+
+Full sentence: 可惜都被她的冷漠给拒之门外。
+
+Target: 可惜 | 都 | 被 | 她的 | 冷漠 | 给 | 拒 | 之 | 门外.
+Alter.: ＸＸ | 想 | 这 | 中小 | 无数 | 说 | ＃ | 月 | 一个.
+
+--------
+Trial: 44
+Critical: 滥 / Distractors – Both: 湛 | Orth: 溢 | Phon: 烂 | Diff: 咿
+
+Full sentence: 对于女子的情爱，专而不滥，诚而不欺。
+
+Target: 对于 | 女子 | 的 | 情爱, | 专 | 而不 | 滥, | 诚 | 而不 | 欺.
+Alter.: ＸＸ | 所谓 | 某 | 出来, | 说 | 重新 | ＃, | 人 | 因为 | 市.
+
+--------
+Trial: 45
+Critical: 仲 / Distractors – Both: 中 | Orth: 伪 | Phon: 郑 | Diff: 锿
+
+Full sentence: 这两个人不分仲伯，谁去谁留还真不好说。
+
+Target: 这 | 两 | 个人 | 不分 | 仲 | 伯, | 谁 | 去 | 谁 | 留 | 还真 | 不好 | 说.
+Alter.: Ｘ | 来 | 应该 | 什么 | ＃ | 到, | 使 | 由 | 就 | 内 | 措施 | 以下 | 是.
+
+--------
+Trial: 46
+Critical: 唱 / Distractors – Both: 娼 | Orth: 喂 | Phon: 障 | Diff: 威
+
+Full sentence: 鬼知道当时我唱的是么子歌。
+
+Target: 鬼 | 知道 | 当时 | 我 | 唱 | 的是 | 么 | 子 | 歌.
+Alter.: Ｘ | 担任 | 大体 | 呢 | ＃ | 问题 | 与 | 况 | 兼.
+
+--------
+Trial: 47
+Critical: 殃 / Distractors – Both: 秧 | Orth: 映 | Phon: 洋 | Diff: 济
+
+Full sentence: 细看才知那人的裤子的确遭了殃，裤脚已经支离破碎成了几半。
+
+Target: 细看 | 才知 | 那 | 人的 | 裤子 | 的确 | 遭 | 了 | 殃, | 裤 | 脚 | 已经 |  ->
+Alter.: ＸＸ | 从而 | 不 | 环境 | 处于 | 历史 | 内 | 所 | ＃, | 都 | 只 | 政府 |  ->
+
+Target (cont.): | 离 | 破碎 | 成了 | 几 | 半.
+Alter. (cont.): | 最 | 除了 | 规定 | 年 | 八.
+
+--------
+Trial: 48
+Critical: 哟 / Distractors – Both: 呦 | Orth: 响 | Phon: 摇 | Diff: 逛
+
+Full sentence: 可怜的她痛得唉哟了一夜。
+
+Target: 可怜 | 的 | 她 | 痛得 | 唉 | 哟 | 了 | 一夜.
+Alter.: ＸＸ | 于 | 对 | 中国 | 四 | ＃ | 这 | 一个.
+
+--------
+Trial: 49
+Critical: 持 / Distractors – Both: 峙 | Orth: 特 | Phon: 匙 | Diff: 远
+
+Full sentence: 如今，他也持相似的观点。
+
+Target: 如今, | 他 | 也 | 持 | 相似 | 的 | 观点.
+Alter.: ＸＸ, | 按 | 她 | ＃ | 就是 | 才 | 进行.
+
+--------
+Trial: 50
+Critical: 漆 / Distractors – Both: 溪 | Orth: 漾 | Phon: 七 | Diff: 瓮
+
+Full sentence: 家具上面的漆都快掉完了，又黑又脏。
+
+Target: 家具 | 上面 | 的 | 漆 | 都 | 快 | 掉 | 完了, | 又 | 黑 | 又 | 脏.
+Alter.: ＸＸ | 由于 | 日 | ＃ | 是 | 人 | 社 | 程度, | 间 | 会 | 从 | 业.
+
+--------
+Trial: 51
+Critical: 非 / Distractors – Both: 诽 | Orth: 谙 | Phon: 废 | Diff: 円
+
+Full sentence: 能在这里经常出入的人非富即贵。
+
+Target: 能 | 在 | 这里 | 经常 | 出入 | 的 | 人 | 非 | 富 | 即 | 贵.
+Alter.: Ｘ | 各 | 为了 | 能力 | 所有 | 了 | 是 | ＃ | 随 | 那 | 不.
+
+--------
+Trial: 52
+Critical: 鸦 / Distractors – Both: 鸭 | Orth: 鸿 | Phon: 丫 | Diff: 胫
+
+Full sentence: 她只是被别人穿过的衣，只是一块用过的布，只是一张涂了鸦的纸。
+
+Target: 她 | 只是 | 被 | 别人 | 穿过 | 的 | 衣, | 只是 | 一块 | 用 | 过的 | 布, | ->
+Alter.: Ｘ | 资本 | 书 | 共同 | 中小 | 年 | 也, | 分析 | 内在 | 替 | 而且 | 这, | ->
+
+Target (cont.): 是 | 一张 | 涂 | 了 | 鸦 | 的 | 纸.
+Alter. (cont.): 营 | 暂行 | 对 | 全 | ＃ | 就 | 在.
+
+--------
+Trial: 53
+Critical: 健 / Distractors – Both: 键 | Orth: 挺 | Phon: 剑 | Diff: 医
+
+Full sentence: 他的步履依旧矫健，只是他的眼睛茫然。
+
+Target: 他的 | 步履 | 依旧 | 矫 | 健, | 只是 | 他的 | 眼睛 | 茫然.
+Alter.: ＸＸ | 进行 | 一个 | 国 | ＃, | 按照 | 暂行 | 例如 | 规定.
+
+--------
+Trial: 54
+Critical: 沐 / Distractors – Both: 汨 | Orth: 汪 | Phon: 剃 | Diff: 昂
+
+Full sentence: 日子虽然过得苦，但母亲活泼开朗的性格却使我们如沐春风。
+
+Target: 日子 | 虽然 | 过得 | 苦, | 但 | 母亲 | 活泼 | 开朗 | 的 | 性格 | 却 | 使 | ->
+Alter.: ＸＸ | 中央 | 其余 | 内, | 性 | 初级 | 作用 | 比较 | 法 | 对于 | 该 | 馆 | ->
+
+Target (cont.): 们 | 如 | 沐 | 春 | 风.
+Alter. (cont.): 述 | 这 | ＃ | 各 | 等.
+
+--------
+Trial: 55
+Critical: 根 / Distractors – Both: 柑 | Orth: 柚 | Phon: 感 | Diff: 肟
+
+Full sentence: 时钟的分针牵引着老板心中那根紧绷的弦。
+
+Target: 时钟 | 的 | 分针 | 牵引 | 着 | 老板 | 心中 | 那 | 根 | 紧 | 绷 | 的 | 弦.
+Alter.: ＸＸ | 此 | 可以 | 这个 | 也 | 百十 | 国家 | 性 | ＃ | 某 | 法 | 都 | 了.
+
+--------
+Trial: 56
+Critical: 诘 / Distractors – Both: 拮 | Orth: 按 | Phon: 邪 | Diff: 韵
+
+Full sentence: 面对妻子、女儿的诘问，孤独剑宽慰地说。
+
+Target: 面对 | 妻子, | 女儿 | 的 | 诘 | 问, | 孤独 | 剑 | 宽 | 慰 | 地 | 说.
+Alter.: ＸＸ | 一次, | 个人 | 非 | ＃ | 也, | 阶级 | 向 | 才 | 看 | 对 | 最.
+
+--------
+Trial: 57
+Critical: 溃 / Distractors – Both: 匮 | Orth: 湲 | Phon: 跪 | Diff: 营
+
+Full sentence: 在丢下遍地的尸体后，田鼠群再次溃退，消失在茫茫的山野之中。
+
+Target: 在 | 丢下 | 遍地 | 的 | 尸体 | 后, | 田鼠 | 群 | 再次 | 溃 | 退, | 消失 | ->
+Alter.: Ｘ | 不仅 | 不同 | 性 | 任何 | 市, | 继续 | 这 | 整个 | ＃ | 来, | 变化 | ->
+
+Target (cont.):  | 茫茫 | 的 | 山野 | 之中.
+Alter. (cont.):  | 不是 | 是 | 难道 | 一起.
+
+--------
+Trial: 58
+Critical: 抬 / Distractors – Both: 胎 | Orth: 给 | Phon: 太 | Diff: 荫
+
+Full sentence: 右腿软软的，抬不起来。
+
+Target: 右腿 | 软软 | 的, | 抬 | 不 | 起来.
+Alter.: ＸＸ | 依照 | 使, | ＃ | 就 | 以后.
+
+--------
+Trial: 59
+Critical: 倚 / Distractors – Both: 椅 | Orth: 倌 | Phon: 乙 | Diff: 疮
+
+Full sentence: 他的椅边斜倚着双拐。
+
+Target: 他的 | 椅 | 边 | 斜 | 倚 | 着 | 双 | 拐.
+Alter.: ＸＸ | 在 | 还 | 按 | ＃ | 使 | 各 | 如.
+
+--------
+Trial: 60
+Critical: 沿 / Distractors – Both: 泱 | Orth: 治 | Phon: 衍 | Diff: 迄
+
+Full sentence: 三人打的沿他回家的路追去。
+
+Target: 三人 | 打 | 的 | 沿 | 他 | 回家 | 的 | 路 | 追去.
+Alter.: ＸＸ | 月 | 却 | ＃ | 但 | 什么 | 在 | 是 | 从而.
+
+--------
+Trial: 61
+Critical: 训 / Distractors – Both: 巡 | Orth: 讹 | Phon: 迅 | Diff: 腰
+
+Full sentence: 马戏团的训兽表演开始了。
+
+Target: 马戏 | 团 | 的 | 训 | 兽 | 表演 | 开始 | 了.
+Alter.: ＸＸ | 不 | 跟 | ＃ | 此 | 由于 | 可是 | 一.
+
+--------
+Trial: 62
+Critical: 喃 / Distractors – Both: 楠 | Orth: 哺 | Phon: 囡 | Diff: 浴
+
+Full sentence: 老板娘不再说什么了，只是不停地喃什么显灵啊求饶之类的话。
+
+Target: 老板娘 | 不再 | 说 | 什么 | 了, | 只是 | 不停地 | 喃 | 什么 | 显 | 灵 | 啊  ->
+Alter.: ＸＸＸ | 结构 | 这 | 叉子 | 都, | 帝国 | 决定性 | ＃ | 就是 | 呢 | 则 | 但  ->
+
+Target (cont.): 求 | 饶 | 之类 | 的话.
+Alter. (cont.): 某 | 啦 | 措施 | 但是.
+
+--------
+Trial: 63
+Critical: 茬 / Distractors – Both: 荞 | Orth: 英 | Phon: 翘 | Diff: 婴
+
+Full sentence: 起初谁也没理他的茬，都知道他又在那设套儿。
+
+Target: 起初 | 谁 | 也没 | 理 | 他的 | 茬, | 都 | 知道 | 他 | 又在 | 那 | 设 | 套儿.
+Alter.: ＸＸ | 月 | 技术 | 仅 | 不得 | ＃, | 为 | 教师 | 位 | 其他 | 能 | 占 | 内在.
+
+--------
+Trial: 64
+Critical: 铰 / Distractors – Both: 饺 | Orth: 银 | Phon: 搅 | Diff: 尹
+
+Full sentence: 她刚带领学生们用薄薄的闪光彩纸铰完雪花。
+
+Target: 她 | 刚 | 带领 | 学生 | 们 | 用 | 薄薄的 | 闪光 | 彩纸 | 铰 | 完 | 雪花.
+Alter.: Ｘ | 党 | 任务 | 不得 | 这 | 者 | 一部分 | 也是 | 此外 | ＃ | 不 | 中型.
+
+--------
+Trial: 65
+Critical: 哦 / Distractors – Both: 娥 | Orth: 唤 | Phon: 额 | Diff: 涮
+
+Full sentence: 我可没忘了你哦，永远的朋友。
+
+Target: 我 | 可没 | 忘了 | 你 | 哦, | 永远 | 的 | 朋友.
+Alter.: Ｘ | 特种 | 有些 | 不 | ＃, | 部门 | 副 | 成为.
+
+--------
+Trial: 66
+Critical: 钦 / Distractors – Both: 欣 | Orth: 钥 | Phon: 吣 | Diff: 霭
+
+Full sentence: 小时侯我最钦敬信赖的人是舅舅。
+
+Target: 小时 | 侯 | 我 | 最 | 钦 | 敬 | 信赖 | 的 | 人 | 是 | 舅舅.
+Alter.: ＸＸ | 竟 | 全 | 法 | ＃ | 都 | 只是 | 较 | 从 | 月 | 其它.
+
+--------
+Trial: 67
+Critical: 铝 / Distractors – Both: 侣 | Orth: 铬 | Phon: 礼 | Diff: 猿
+
+Full sentence: 这就是那家伙的反光铝盆的威力。
+
+Target: 这 | 就是 | 那 | 家伙 | 的 | 反光 | 铝 | 盆 | 的 | 威力.
+Alter.: Ｘ | 受到 | 每 | 一切 | 党 | 天空 | ＃ | 对 | 使 | 一次.
+
+--------
+Trial: 68
+Critical: 提 / Distractors – Both: 惕 | Orth: 援 | Phon: 剔 | Diff: 忘
+
+Full sentence: 国际会议上第一个提的菜是胡萝卜。
+
+Target: 国际 | 会议 | 上 | 第 | 一个 | 提 | 的 | 菜 | 是 | 胡萝卜.
+Alter.: ＸＸ | 按照 | 那 | 家 | 余年 | ＃ | 按 | 对 | 又 | 一连串.
+
+--------
+Trial: 69
+Critical: 脐 / Distractors – Both: 齐 | Orth: 胺 | Phon: 笈 | Diff: 二
+
+Full sentence: 还真有点象人类的露脐装，或三点式的短裤所展示的效果。
+
+Target: 还真有 | 点 | 像 | 人类 | 的 | 露 | 脐 | 装, | 或 | 三 | 点 | 式 | 的 | ->
+Alter.: ＸＸＸ | 各 | 某 | 法定 | 颇 | 抓 | ＃ | 年, | 牙 | 也 | 都 | 愈 | 替 | ->
+
+Target (cont.): 裤 | 所 | 展示 | 的 | 效果.
+Alter. (cont.): 西 | 国 | 各个 | 就 | 因为.
+
+--------
+Trial: 70
+Critical: 吱 / Distractors – Both: 肢 | Orth: 听 | Phon: 湿 | Diff: 筵
+
+Full sentence: 这时，西屋的房门吱呀一声开了。
+
+Target: 这时, | 西屋 | 的 | 房门 | 吱 | 呀 | 一声 | 开 | 了.
+Alter.: ＸＸ, | 民族 | 在 | 之后 | ＃ | 人 | 关系 | 性 | 仍.
+
+--------
+Trial: 71
+Critical: 悉 / Distractors – Both: 息 | Orth: 恙 | Phon: 希 | Diff: 掩
+
+Full sentence: 还有一样，他热心慈善，除了吃用外，所赚银两悉数拿去帮助穷人。
+
+Target: 还有 | 一样, | 他 | 热心 | 慈善, | 除了 | 吃 | 用 | 外, | 所 | 赚 | 银两  ->
+Alter.: ＸＸ | 单位, | 的 | 各个 | 无法, | 有关 | 还 | 性 | 也, | 到 | 与 | 因此  ->
+
+Target (cont.): 悉 | 数 | 拿去 | 帮助 | 穷人.
+Alter. (cont.): ＃ | 但 | 直到 | 较为 | 以上.
+
+--------
+Trial: 72
+Critical: 思 / Distractors – Both: 息 | Orth: 恙 | Phon: 施 | Diff: 漾
+
+Full sentence: 她的老哥百思不得其法。
+
+Target: 她的 | 老哥 | 百 | 思 | 不得 | 其 | 法.
+Alter.: ＸＸ | 为了 | 你 | ＃ | 其实 | 版 | 不.
+
+--------
+Trial: 73
+Critical: 俯 / Distractors – Both: 府 | Orth: 俺 | Phon: 副 | Diff: 剜
+
+Full sentence: 又是在阳台，一个柳丝披肩的女孩俯在那里。
+
+Target: 又是 | 在 | 阳台, | 一个 | 柳丝 | 披肩 | 的 | 女孩 | 俯 | 在 | 那里.
+Alter.: ＸＸ | 盘 | 优质, | 内在 | 例如 | 经济 | 人 | 必须 | ＃ | 月 | 也是.
+
+--------
+Trial: 74
+Critical: 栖 / Distractors – Both: 硒 | Orth: 样 | Phon: 七 | Diff: 院
+
+Full sentence: 灵山是上古时期的仙山，山顶上有一棵梧桐树，树上栖着一只彩凤。
+
+Target: 灵山 | 是 | 上古 | 时期 | 的 | 仙山, | 山顶 | 上有 | 一棵 | 梧桐 | 树, | 树 ->
+Alter.: ＸＸ | 就 | 内在 | 就是 | 跟 | 以上, | 同时 | 这些 | 涉及 | 而且 | 这, | 对 ->
+
+Target (cont.):  上 | 栖 | 着 | 一只 | 彩 | 凤.
+Alter. (cont.):  即 | ＃ | 了 | 以外 | 从 | 全.
+
+--------
+Trial: 75
+Critical: 钳 / Distractors – Both: 铅 | Orth: 铱 | Phon: 乾 | Diff: 伊
+
+Full sentence: 有了鱼篓和鱼钳还不够，还要准备照鱼的明火。
+
+Target: 有了 | 鱼篓 | 和 | 鱼 | 钳 | 还 | 不够, | 还 | 要 | 准备 | 照 | 鱼 | 的  ->
+Alter.: ＸＸ | 资产 | 不 | 也 | ＃ | 而 | 中央, | 十 | 所 | 制度 | 每 | 却 | 某  ->
+
+Target (cont.): 明 | 火.
+Alter. (cont.): 但 | 毫.
+
+--------
+Trial: 76
+Critical: 吹 / Distractors – Both: 吱 | Orth: 听 | Phon: 摧 | Diff: 摁
+
+Full sentence: 我说妖精吹的是仙气。
+
+Target: 我 | 说 | 妖精 | 吹 | 的是 | 仙 | 气.
+Alter.: Ｘ | 按 | 高级 | ＃ | 也是 | 吗 | 就.
+
+--------
+Trial: 77
+Critical: 嗲 / Distractors – Both: 喋 | Orth: 哆 | Phon: 达 | Diff: 赢
+
+Full sentence: 但禁不住我软磨硬泡、撒娇发嗲，他最后还是勉强同意了。
+
+Target: 但 | 禁不住 | 我 | 软 | 磨 | 硬 | 泡, | 撒娇 | 发 | 嗲, | 他 | 最后 | 还 ->
+Alter.: Ｘ | 决定性 | 很 | 他 | 使 | 各 | 就, | 条件 | 为 | ＃, | 不 | 截至 | 因 ->
+
+Target (cont.): | 勉强 | 同意 | 了.
+Alter. (cont.): | 人类 | 人民 | 曾.
+
+--------
+Trial: 78
+Critical: 活 / Distractors – Both: 浊 | Orth: 恬 | Phon: 郭 | Diff: 岸
+
+Full sentence: 毕竟，那是一条鲜活的生命啊！
+
+Target: 毕竟, | 那是 | 一条 | 鲜 | 活 | 的 | 生命 | 啊.
+Alter.: ＸＸ, | 涉及 | 暂行 | 替 | ＃ | 仅 | 成为 | 较.
+
+--------
+Trial: 79
+Critical: 慰 / Distractors – Both: 熨 | Orth: 憨 | Phon: 位 | Diff: 沧
+
+Full sentence: 老人的心稍微宽慰了一点。
+
+Target: 老人 | 的 | 心 | 稍微 | 宽 | 慰 | 了 | 一点.
+Alter.: ＸＸ | 暂 | 更 | 名片 | 法 | ＃ | 从 | 上述.
+
+--------
+Trial: 80
+Critical: 滴 / Distractors – Both: 嫡 | Orth: 淌 | Phon: 剔 | Diff: 暗
+
+Full sentence: 他久久的看着已经念完的信，眼泪一滴一滴的滴在信纸上。
+
+Target: 他 | 久久 | 的 | 看 | 着 | 已经 | 念完 | 的 | 信, | 眼泪 | 一滴 | 一滴 |  ->
+Alter.: Ｘ | 公用 | 这 | 不 | 太 | 更加 | 内容 | 某 | 到, | 工作 | 思想 | 国有 |  ->
+
+Target (cont.): | 滴 | 在 | 信纸 | 上.
+Alter. (cont.): | ＃ | 最 | 甚至 | 要.
+

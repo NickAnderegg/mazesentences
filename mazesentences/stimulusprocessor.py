@@ -8,7 +8,7 @@ import unicodedata
 from .sentenceselector import Selector
 
 def read_file():
-    path = pathlib.Path('mazesentences/data/stimulus_set-02.csv')
+    path = pathlib.Path('mazesentences/data/stimulus_set-03.csv')
 
     stimuli = dict()
 
@@ -73,6 +73,7 @@ def reprocess_trials():
             print('Sentence #{} marked for regeneration'.format(ix+1))
             continue
 
+        print(trial['full_sentence'])
         if trial['full_sentence'].index(trial['critical_target']) >= len(trial['full_sentence']) - 3:
             print('Sentence #{} has late critical char appearance'.format(ix+1))
             bad_trials.append(ix)
@@ -162,8 +163,8 @@ def get_sentences():
             trial['critical_target'] = critical
             trial['distractors'] = distractors
 
-            selector = Selector('http://192.168.25.150:9200/', 'chinese_simplified', 2, min_year=1980)
-            # selector = Selector('http://home.anderegg.io:9292/', 'chinese_simplified', 2, min_year=1980)
+            # selector = Selector('http://192.168.25.150:9200/', 'chinese_simplified', 2, min_year=1980)
+            selector = Selector('http://home.anderegg.io:9292/', 'chinese_simplified', 2, min_year=1980)
 
             sentences = selector.get_sentences(critical, max_sentences=1000)
 
@@ -252,8 +253,8 @@ def regenerate_distractors():
 
     trials = {'sentences': trials}
 
-    selector = Selector('http://192.168.25.150:9200/', 'chinese_simplified', 2, min_year=1980)
-    # selector = Selector('http://home.anderegg.io:9292/', 'chinese_simplified', 2, min_year=1980)
+    # selector = Selector('http://192.168.25.150:9200/', 'chinese_simplified', 2, min_year=1980)
+    selector = Selector('http://home.anderegg.io:9292/', 'chinese_simplified', 2, min_year=1980)
     sentence_number = 0
     for trial in trials['sentences']:
         sentence_number += 1
@@ -304,15 +305,18 @@ def _get_trials_file(increment=True):
         # print('Returning: ', trials_file)
         return trials_file
 
-def generate_sample(n, choices=None):
+def generate_sample(n, rand=True, choices=None):
     trials_file = _get_trials_file(increment=False)
 
     with trials_file.open('r', encoding='utf-8') as f:
         trials_list = json.load(f)
         trials_list = trials_list['sentences']
 
-    if not choices:
+    if rand:
         choices = random.sample(range(1, len(trials_list)+1), n)
+    else:
+        if not choices:
+            choices = range(1, n+1)
 
     subset = []
     for choice in choices:
