@@ -1,0 +1,995 @@
+{
+  "sentences": [
+    {
+      "critical_target": "息",
+      "sentence_number": 1,
+      "distractors": {
+        "orth_sim": "恙",
+        "phon_sim": "戌",
+        "both_dif": "院",
+        "both_sim": "悉"
+      },
+      "combined_sentence": "负伤的战士虚弱的连鼻息也察觉不到。",
+      "full_sentence": [
+        "负伤的",
+        "战士",
+        "虚弱的",
+        "连",
+        "鼻息",
+        "也",
+        "察觉",
+        "不",
+        "到",
+        "。"
+      ]
+    },
+    {
+      "critical_target": "枉",
+      "sentence_number": 2,
+      "distractors": {
+        "orth_sim": "析",
+        "phon_sim": "亡",
+        "both_dif": "狙",
+        "both_sim": "旺"
+      },
+      "combined_sentence": "他并没有犯罪但被指控，觉得自己很冤枉，悲愤交加。",
+      "full_sentence": [
+        "他",
+        "并",
+        "没有",
+        "犯罪",
+        "但",
+        "被",
+        "指控",
+        "，",
+        "觉得",
+        "自己",
+        "很",
+        "冤枉",
+        "，",
+        "悲",
+        "愤",
+        "交加",
+        "。"
+      ]
+    },
+    {
+      "critical_target": "治",
+      "sentence_number": 3,
+      "distractors": {
+        "orth_sim": "沿",
+        "phon_sim": "置",
+        "both_dif": "阉",
+        "both_sim": "沼"
+      },
+      "combined_sentence": "有病就要治病，不能拖。",
+      "full_sentence": [
+        "有",
+        "病",
+        "就要",
+        "治病",
+        "，",
+        "不能",
+        "拖",
+        "。"
+      ]
+    },
+    {
+      "critical_target": "央",
+      "sentence_number": 4,
+      "distractors": {
+        "orth_sim": "沸",
+        "phon_sim": "佯",
+        "both_dif": "蓟",
+        "both_sim": "泱"
+      },
+      "full_sentence": "你现在收看的是中央电视台新闻频道。"
+    },
+    {
+      "critical_target": "汪",
+      "sentence_number": 5,
+      "distractors": {
+        "orth_sim": "注",
+        "phon_sim": "剜",
+        "both_dif": "酗",
+        "both_sim": "王"
+      },
+      "full_sentence": "小狗见到他就汪汪的叫了起来。"
+    },
+    {
+      "critical_target": "吹",
+      "sentence_number": 6,
+      "distractors": {
+        "orth_sim": "听",
+        "phon_sim": "摧",
+        "both_dif": "摁",
+        "both_sim": "吱"
+      },
+      "full_sentence": "儿童游乐场的气球小丑给小朋友们吹出不同的气球造型。"
+    },
+    {
+      "critical_target": "息",
+      "sentence_number": 7,
+      "distractors": {
+        "orth_sim": "恙",
+        "phon_sim": "希",
+        "both_dif": "掩",
+        "both_sim": "悉"
+      },
+      "full_sentence": "他天生就有面盲症，所以很多时候认不出来熟悉的面孔。"
+    },
+    {
+      "critical_target": "栖",
+      "sentence_number": 8,
+      "distractors": {
+        "orth_sim": "样",
+        "phon_sim": "七",
+        "both_dif": "院",
+        "both_sim": "硒"
+      },
+      "full_sentence": "鳄鱼是水陆两栖动物。"
+    },
+    {
+      "critical_target": "仗",
+      "sentence_number": 9,
+      "distractors": {
+        "orth_sim": "仪",
+        "phon_sim": "障",
+        "both_dif": "壹",
+        "both_sim": "丈"
+      },
+      "full_sentence": "大侠萧峰为人很仗义。"
+    },
+    {
+      "critical_target": "殃",
+      "sentence_number": 10,
+      "distractors": {
+        "orth_sim": "秩",
+        "phon_sim": "洋",
+        "both_dif": "汽",
+        "both_sim": "秧"
+      },
+      "full_sentence": "市中心的小餐馆着火了，附近好多房屋都遭殃了。"
+    },
+    {
+      "critical_target": "王",
+      "sentence_number": 11,
+      "distractors": {
+        "orth_sim": "主",
+        "phon_sim": "网",
+        "both_dif": "骥",
+        "both_sim": "汪"
+      },
+      "full_sentence": "老虎的额头上有一个王字。"
+    },
+    {
+      "critical_target": "眩",
+      "sentence_number": 12,
+      "distractors": {
+        "orth_sim": "铱",
+        "phon_sim": "渲",
+        "both_dif": "迂",
+        "both_sim": "铉"
+      },
+      "full_sentence": "他饿得头晕目眩站立不稳。"
+    },
+    {
+      "critical_target": "芹",
+      "sentence_number": 13,
+      "distractors": {
+        "orth_sim": "苇",
+        "phon_sim": "欣",
+        "both_dif": "液",
+        "both_sim": "芯"
+      },
+      "full_sentence": "作为蔬菜，芹菜也许不是最好吃的。"
+    },
+    {
+      "critical_target": "沼",
+      "sentence_number": 14,
+      "distractors": {
+        "orth_sim": "沿",
+        "phon_sim": "赵",
+        "both_dif": "铟",
+        "both_sim": "昭"
+      },
+      "combined_sentence": "他们开的卡车陷入了泥泞的沼泽，大家都很害怕。",
+      "full_sentence": [
+        "他们",
+        "开的",
+        "卡车",
+        "陷入了",
+        "泥泞",
+        "的",
+        "沼泽",
+        "，",
+        "大家",
+        "都",
+        "很",
+        "害怕",
+        "。"
+      ]
+    },
+    {
+      "critical_target": "苛",
+      "sentence_number": 15,
+      "distractors": {
+        "orth_sim": "苑",
+        "phon_sim": "抠",
+        "both_dif": "厌",
+        "both_sim": "荷"
+      },
+      "full_sentence": "大家都不喜欢新老板，因为他对员工要求很苛刻。"
+    },
+    {
+      "critical_target": "纹",
+      "sentence_number": 16,
+      "distractors": {
+        "orth_sim": "纸",
+        "phon_sim": "丸",
+        "both_dif": "序",
+        "both_sim": "炆"
+      },
+      "full_sentence": "婆婆年纪很大了，脸上的皱纹密密麻麻。"
+    },
+    {
+      "critical_target": "欣",
+      "sentence_number": 17,
+      "distractors": {
+        "orth_sim": "钥",
+        "phon_sim": "吣",
+        "both_dif": "霭",
+        "both_sim": "钦"
+      },
+      "full_sentence": "妈妈听说我挣了第一个一百万，很欣慰。"
+    },
+    {
+      "critical_target": "喋",
+      "sentence_number": 18,
+      "distractors": {
+        "orth_sim": "哆",
+        "phon_sim": "达",
+        "both_dif": "赢",
+        "both_sim": "嗲"
+      },
+      "full_sentence": "公司同事小王是一个话唠，每一天都喋喋不休没完没了。"
+    },
+    {
+      "critical_target": "哦",
+      "sentence_number": 19,
+      "distractors": {
+        "orth_sim": "唤",
+        "phon_sim": "额",
+        "both_dif": "涮",
+        "both_sim": "娥"
+      },
+      "full_sentence": "璇姐话很少，每次我兴致勃勃的和她说一段话她就回复一个哦，就没下文了。"
+    },
+    {
+      "critical_target": "沐",
+      "sentence_number": 20,
+      "distractors": {
+        "orth_sim": "汪",
+        "phon_sim": "剃",
+        "both_dif": "昂",
+        "both_sim": "汨"
+      },
+      "full_sentence": "我喜欢晨跑，沐浴在早晨的阳光中。"
+    },
+    {
+      "critical_target": "温",
+      "sentence_number": 21,
+      "distractors": {
+        "orth_sim": "滞",
+        "phon_sim": "剜",
+        "both_dif": "讫",
+        "both_sim": "湾"
+      },
+      "full_sentence": "加拿大西海岸最繁华的城市就属温哥华了。"
+    },
+    {
+      "critical_target": "熬",
+      "sentence_number": 22,
+      "distractors": {
+        "orth_sim": "熊",
+        "phon_sim": "凹",
+        "both_dif": "痉",
+        "both_sim": "獒"
+      },
+      "full_sentence": "这周的作业太多了，每天都要熬夜来完成。"
+    },
+    {
+      "critical_target": "活",
+      "sentence_number": 23,
+      "distractors": {
+        "orth_sim": "恬",
+        "phon_sim": "郭",
+        "both_dif": "岸",
+        "both_sim": "浊"
+      },
+      "full_sentence": "大家都希望能够生活得精彩一点。"
+    },
+    {
+      "critical_target": "柱",
+      "sentence_number": 24,
+      "distractors": {
+        "orth_sim": "往",
+        "phon_sim": "述",
+        "both_dif": "严",
+        "both_sim": "驻"
+      },
+      "full_sentence": "中学几何题会问你圆柱体的体积。"
+    },
+    {
+      "critical_target": "漆",
+      "sentence_number": 25,
+      "distractors": {
+        "orth_sim": "漾",
+        "phon_sim": "七",
+        "both_dif": "瓮",
+        "both_sim": "溪"
+      },
+      "full_sentence": "突然停电了，房屋里一下子一片漆黑。"
+    },
+    {
+      "critical_target": "嗜",
+      "sentence_number": 26,
+      "distractors": {
+        "orth_sim": "嗡",
+        "phon_sim": "式",
+        "both_dif": "阳",
+        "both_sim": "嗤"
+      },
+      "full_sentence": "小明的妈妈告诫他不要沾染不良嗜好。"
+    },
+    {
+      "critical_target": "文",
+      "sentence_number": 27,
+      "distractors": {
+        "orth_sim": "汝",
+        "phon_sim": "吻",
+        "both_dif": "躯",
+        "both_sim": "汶"
+      },
+      "full_sentence": "他读书很多，是个文化人。"
+    },
+    {
+      "critical_target": "响",
+      "sentence_number": 28,
+      "distractors": {
+        "orth_sim": "呐",
+        "phon_sim": "抢",
+        "both_dif": "邬",
+        "both_sim": "晌"
+      },
+      "full_sentence": "上课上到一半火警铃响了。"
+    },
+    {
+      "critical_target": "洁",
+      "sentence_number": 29,
+      "distractors": {
+        "orth_sim": "桉",
+        "phon_sim": "攫",
+        "both_dif": "蕴",
+        "both_sim": "桔"
+      },
+      "full_sentence": "小雯觉得自己只是爱干净，但是她男朋友觉得她有洁癖。"
+    },
+    {
+      "critical_target": "桂",
+      "sentence_number": 30,
+      "distractors": {
+        "orth_sim": "佳",
+        "phon_sim": "跪",
+        "both_dif": "儿",
+        "both_sim": "桧"
+      },
+      "full_sentence": "龙眼的另一个名字是桂圆。"
+    },
+    {
+      "critical_target": "硌",
+      "sentence_number": 31,
+      "distractors": {
+        "orth_sim": "铵",
+        "phon_sim": "刻",
+        "both_dif": "臃",
+        "both_sim": "铬"
+      },
+      "full_sentence": "大米饭里面有颗石子硌了牙。"
+    },
+    {
+      "critical_target": "肢",
+      "sentence_number": 32,
+      "distractors": {
+        "orth_sim": "技",
+        "phon_sim": "值",
+        "both_dif": "雁",
+        "both_sim": "枝"
+      },
+      "full_sentence": "真不明白作为一个四肢健全的人，她怎么可以那么懒。"
+    },
+    {
+      "critical_target": "滴",
+      "sentence_number": 33,
+      "distractors": {
+        "orth_sim": "淌",
+        "phon_sim": "剔",
+        "both_dif": "暗",
+        "both_sim": "嫡"
+      },
+      "full_sentence": "古代鉴定亲缘关系的方式是滴血认亲。"
+    },
+    {
+      "critical_target": "倦",
+      "sentence_number": 34,
+      "distractors": {
+        "orth_sim": "倚",
+        "phon_sim": "剑",
+        "both_dif": "讴",
+        "both_sim": "卷"
+      },
+      "full_sentence": "熬了两天三夜的他疲倦不堪。"
+    },
+    {
+      "critical_target": "详",
+      "sentence_number": 35,
+      "distractors": {
+        "orth_sim": "栓",
+        "phon_sim": "乾",
+        "both_dif": "抑",
+        "both_sim": "诠"
+      },
+      "full_sentence": "八卦的她希望朋友能详细讲讲和男朋友相识的故事。"
+    },
+    {
+      "critical_target": "温",
+      "sentence_number": 36,
+      "distractors": {
+        "orth_sim": "揭",
+        "phon_sim": "问",
+        "both_dif": "哉",
+        "both_sim": "揾"
+      },
+      "full_sentence": "她是个可爱的女孩，而且还很温柔。"
+    },
+    {
+      "critical_target": "碗",
+      "sentence_number": 37,
+      "distractors": {
+        "orth_sim": "苑",
+        "phon_sim": "衍",
+        "both_dif": "滋",
+        "both_sim": "宛"
+      },
+      "full_sentence": "她做菜很棒，朋友吃了两大碗米饭。"
+    },
+    {
+      "critical_target": "耗",
+      "sentence_number": 38,
+      "distractors": {
+        "orth_sim": "蚊",
+        "phon_sim": "勺",
+        "both_dif": "揾",
+        "both_sim": "蚝"
+      },
+      "full_sentence": "老鼠另外一个名字是耗子。"
+    },
+    {
+      "critical_target": "烛",
+      "sentence_number": 39,
+      "distractors": {
+        "orth_sim": "冲",
+        "phon_sim": "酌",
+        "both_dif": "庵",
+        "both_sim": "浊"
+      },
+      "full_sentence": "生日蛋糕上插满了蜡烛很美。"
+    },
+    {
+      "critical_target": "耳",
+      "sentence_number": 40,
+      "distractors": {
+        "orth_sim": "两",
+        "phon_sim": "尔",
+        "both_dif": "叫",
+        "both_sim": "而"
+      },
+      "full_sentence": "苹果公司新出的耳机很容易丢。"
+    },
+    {
+      "critical_target": "饿",
+      "sentence_number": 41,
+      "distractors": {
+        "orth_sim": "娣",
+        "phon_sim": "厄",
+        "both_dif": "恍",
+        "both_sim": "娥"
+      },
+      "full_sentence": "忙完工作才感觉半天没吃饭有点饿了。"
+    },
+    {
+      "critical_target": "鸭",
+      "sentence_number": 42,
+      "distractors": {
+        "orth_sim": "鸿",
+        "phon_sim": "丫",
+        "both_dif": "胫",
+        "both_sim": "鸦"
+      },
+      "full_sentence": "我最喜欢的宵夜是麻辣鸭脖。"
+    },
+    {
+      "critical_target": "拒",
+      "sentence_number": 43,
+      "distractors": {
+        "orth_sim": "柜",
+        "phon_sim": "剧",
+        "both_dif": "剜",
+        "both_sim": "巨"
+      },
+      "full_sentence": "男生向女生表白被拒绝了。"
+    },
+    {
+      "critical_target": "分",
+      "sentence_number": 44,
+      "distractors": {
+        "orth_sim": "芸",
+        "phon_sim": "珍",
+        "both_dif": "揠",
+        "both_sim": "芬"
+      },
+      "full_sentence": "和男朋友分手后，她更加努力的工作。"
+    },
+    {
+      "critical_target": "唯",
+      "sentence_number": 45,
+      "distractors": {
+        "orth_sim": "准",
+        "phon_sim": "为",
+        "both_dif": "衷",
+        "both_sim": "维"
+      },
+      "full_sentence": "她男朋友很听她话，对她唯唯诺诺。"
+    },
+    {
+      "critical_target": "噪",
+      "sentence_number": 46,
+      "distractors": {
+        "orth_sim": "嘤",
+        "phon_sim": "赵",
+        "both_dif": "音",
+        "both_sim": "燥"
+      },
+      "full_sentence": "楼上装修的时候产生很大噪音。"
+    },
+    {
+      "critical_target": "健",
+      "sentence_number": 47,
+      "distractors": {
+        "orth_sim": "挺",
+        "phon_sim": "剑",
+        "both_dif": "医",
+        "both_sim": "键"
+      },
+      "full_sentence": "朱老板有很好的生活习惯，每天都会健身。"
+    },
+    {
+      "critical_target": "守",
+      "sentence_number": 48,
+      "distractors": {
+        "orth_sim": "安",
+        "phon_sim": "首",
+        "both_dif": "臃",
+        "both_sim": "寿"
+      },
+      "full_sentence": "他生病住院时，女朋友彻夜守护在身旁。"
+    },
+    {
+      "critical_target": "中",
+      "sentence_number": 49,
+      "distractors": {
+        "orth_sim": "伪",
+        "phon_sim": "郑",
+        "both_dif": "锿",
+        "both_sim": "仲"
+      },
+      "full_sentence": "写文章要一气呵成，不能中间停歇。"
+    },
+    {
+      "critical_target": "仪",
+      "sentence_number": 50,
+      "distractors": {
+        "orth_sim": "仗",
+        "phon_sim": "颐",
+        "both_dif": "眶",
+        "both_sim": "义"
+      },
+      "full_sentence": "中学教室已经配备了电脑和投影仪。"
+    },
+    {
+      "critical_target": "持",
+      "sentence_number": 51,
+      "distractors": {
+        "orth_sim": "特",
+        "phon_sim": "匙",
+        "both_dif": "远",
+        "both_sim": "峙"
+      },
+      "full_sentence": "能言善辩的他被选为晚会的主持人。"
+    },
+    {
+      "critical_target": "思",
+      "sentence_number": 52,
+      "distractors": {
+        "orth_sim": "恙",
+        "phon_sim": "施",
+        "both_dif": "漾",
+        "both_sim": "息"
+      },
+      "full_sentence": "身处异地，他经常思念家乡。"
+    },
+    {
+      "critical_target": "挤",
+      "sentence_number": 53,
+      "distractors": {
+        "orth_sim": "侪",
+        "phon_sim": "剂",
+        "both_dif": "纨",
+        "both_sim": "齐"
+      },
+      "full_sentence": "他没有车，只能每天挤公交上班。"
+    },
+    {
+      "critical_target": "抬",
+      "sentence_number": 54,
+      "distractors": {
+        "orth_sim": "给",
+        "phon_sim": "太",
+        "both_dif": "荫",
+        "both_sim": "胎"
+      },
+      "full_sentence": "救护车刚停下，两名医生就抬着担架下来了。"
+    },
+    {
+      "critical_target": "蹭",
+      "sentence_number": 55,
+      "distractors": {
+        "orth_sim": "嗳",
+        "phon_sim": "成",
+        "both_dif": "悦",
+        "both_sim": "噌"
+      },
+      "full_sentence": "他的猫很粘人，喜欢蹭他的脚。"
+    },
+    {
+      "critical_target": "秘",
+      "sentence_number": 56,
+      "distractors": {
+        "orth_sim": "秧",
+        "phon_sim": "俪",
+        "both_dif": "璜",
+        "both_sim": "铋"
+      },
+      "full_sentence": "指导员教育战士们绝对不可以泄露军事机密。"
+    },
+    {
+      "critical_target": "椅",
+      "sentence_number": 57,
+      "distractors": {
+        "orth_sim": "倌",
+        "phon_sim": "乙",
+        "both_dif": "疮",
+        "both_sim": "倚"
+      },
+      "full_sentence": "餐桌旁边摆放了四把椅子。"
+    },
+    {
+      "critical_target": "促",
+      "sentence_number": 58,
+      "distractors": {
+        "orth_sim": "捉",
+        "phon_sim": "蹙",
+        "both_dif": "剜",
+        "both_sim": "俗"
+      },
+      "full_sentence": "多运动可以促进身体的新陈代谢。"
+    },
+    {
+      "critical_target": "缉",
+      "sentence_number": 59,
+      "distractors": {
+        "orth_sim": "缘",
+        "phon_sim": "几",
+        "both_dif": "赝",
+        "both_sim": "辑"
+      },
+      "full_sentence": "警察正在训练这只狗成为缉毒犬。"
+    },
+    {
+      "critical_target": "提",
+      "sentence_number": 60,
+      "distractors": {
+        "orth_sim": "援",
+        "phon_sim": "剔",
+        "both_dif": "忘",
+        "both_sim": "惕"
+      },
+      "full_sentence": "他是个好学的孩子，总会向老师提各种问题。"
+    },
+    {
+      "critical_target": "唱",
+      "sentence_number": 61,
+      "distractors": {
+        "orth_sim": "喂",
+        "phon_sim": "障",
+        "both_dif": "威",
+        "both_sim": "娼"
+      },
+      "full_sentence": "他一边弹吉他，一边唱歌。"
+    },
+    {
+      "critical_target": "溪",
+      "sentence_number": 62,
+      "distractors": {
+        "orth_sim": "演",
+        "phon_sim": "昔",
+        "both_dif": "晏",
+        "both_sim": "漆"
+      },
+      "full_sentence": "他们在山中迷路了，只能沿着溪流一直走。"
+    },
+    {
+      "critical_target": "搪",
+      "sentence_number": 63,
+      "distractors": {
+        "orth_sim": "揖",
+        "phon_sim": "尝",
+        "both_dif": "鹬",
+        "both_sim": "塘"
+      },
+      "full_sentence": "他不知道怎么回答，只能胡乱说点搪塞过去。"
+    },
+    {
+      "critical_target": "铝",
+      "sentence_number": 64,
+      "distractors": {
+        "orth_sim": "铬",
+        "phon_sim": "礼",
+        "both_dif": "猿",
+        "both_sim": "侣"
+      },
+      "full_sentence": "装潢公司建议说窗框要用铝合金。"
+    },
+    {
+      "critical_target": "憎",
+      "sentence_number": 65,
+      "distractors": {
+        "orth_sim": "懊",
+        "phon_sim": "铛",
+        "both_dif": "轧",
+        "both_sim": "僧"
+      },
+      "full_sentence": "他是个和平主义者，对战争十分的憎恶。"
+    },
+    {
+      "critical_target": "沿",
+      "sentence_number": 66,
+      "distractors": {
+        "orth_sim": "治",
+        "phon_sim": "衍",
+        "both_dif": "迄",
+        "both_sim": "泱"
+      },
+      "full_sentence": "洪水冲破堤岸，淹没了沿岸很多庄稼。"
+    },
+    {
+      "critical_target": "根",
+      "sentence_number": 67,
+      "distractors": {
+        "orth_sim": "柚",
+        "phon_sim": "感",
+        "both_dif": "肟",
+        "both_sim": "柑"
+      },
+      "full_sentence": "人参其实是植物的根。"
+    },
+    {
+      "critical_target": "昏",
+      "sentence_number": 68,
+      "distractors": {
+        "orth_sim": "杳",
+        "phon_sim": "獾",
+        "both_dif": "捱",
+        "both_sim": "昆"
+      },
+      "full_sentence": "太阳落山了，天色渐渐昏暗下来。"
+    },
+    {
+      "critical_target": "滥",
+      "sentence_number": 69,
+      "distractors": {
+        "orth_sim": "溢",
+        "phon_sim": "烂",
+        "both_dif": "咿",
+        "both_sim": "湛"
+      },
+      "full_sentence": "各种补品要遵医嘱吃，不能滥用。"
+    },
+    {
+      "critical_target": "俯",
+      "sentence_number": 70,
+      "distractors": {
+        "orth_sim": "俺",
+        "phon_sim": "副",
+        "both_dif": "剜",
+        "both_sim": "府"
+      },
+      "full_sentence": "他弓着腰，俯身去捡钱包。"
+    },
+    {
+      "critical_target": "演",
+      "sentence_number": 71,
+      "distractors": {
+        "orth_sim": "滴",
+        "phon_sim": "衍",
+        "both_dif": "驱",
+        "both_sim": "淹"
+      },
+      "full_sentence": "导演到电影学院来物色新片的演员。"
+    },
+    {
+      "critical_target": "弹",
+      "sentence_number": 72,
+      "distractors": {
+        "orth_sim": "禅",
+        "phon_sim": "袒",
+        "both_dif": "郁",
+        "both_sim": "掸"
+      },
+      "full_sentence": "他曾是个士兵，腿上还有子弹留下的伤疤。"
+    },
+    {
+      "critical_target": "红",
+      "sentence_number": 73,
+      "distractors": {
+        "orth_sim": "仁",
+        "phon_sim": "控",
+        "both_dif": "淤",
+        "both_sim": "讧"
+      },
+      "full_sentence": "小女孩想要把自己的房间刷成粉红色。"
+    },
+    {
+      "critical_target": "昆",
+      "sentence_number": 74,
+      "distractors": {
+        "orth_sim": "昱",
+        "phon_sim": "困",
+        "both_dif": "鄂",
+        "both_sim": "昏"
+      },
+      "full_sentence": "蜜蜂和蝴蝶都是昆虫。"
+    },
+    {
+      "critical_target": "饺",
+      "sentence_number": 75,
+      "distractors": {
+        "orth_sim": "银",
+        "phon_sim": "搅",
+        "both_dif": "尹",
+        "both_sim": "铰"
+      },
+      "full_sentence": "北方过年一定是要吃饺子的。"
+    },
+    {
+      "critical_target": "娟",
+      "sentence_number": 76,
+      "distractors": {
+        "orth_sim": "媚",
+        "phon_sim": "倦",
+        "both_dif": "弋",
+        "both_sim": "绢"
+      },
+      "full_sentence": "但愿人长久，千里共婵娟，是一句诗。"
+    },
+    {
+      "critical_target": "铅",
+      "sentence_number": 77,
+      "distractors": {
+        "orth_sim": "铱",
+        "phon_sim": "乾",
+        "both_dif": "伊",
+        "both_sim": "钳"
+      },
+      "full_sentence": "他的文具盒里装满了削好的铅笔。"
+    },
+    {
+      "critical_target": "慰",
+      "sentence_number": 78,
+      "distractors": {
+        "orth_sim": "憨",
+        "phon_sim": "位",
+        "both_dif": "沧",
+        "both_sim": "熨"
+      },
+      "full_sentence": "他今天心情很差，拒绝了所有人的安慰离开了。"
+    },
+    {
+      "critical_target": "脐",
+      "sentence_number": 79,
+      "distractors": {
+        "orth_sim": "胺",
+        "phon_sim": "笈",
+        "both_dif": "二",
+        "both_sim": "齐"
+      },
+      "full_sentence": "宝宝出生后，护士剪断了他的脐带。"
+    },
+    {
+      "critical_target": "荧",
+      "sentence_number": 80,
+      "distractors": {
+        "orth_sim": "荤",
+        "phon_sim": "嬴",
+        "both_dif": "筷",
+        "both_sim": "莹"
+      },
+      "full_sentence": "他在偶像的演唱会上，兴奋的跟着旋律挥舞着手上的荧光棒。"
+    },
+    {
+      "critical_target": "荞",
+      "sentence_number": 81,
+      "distractors": {
+        "orth_sim": "英",
+        "phon_sim": "翘",
+        "both_dif": "婴",
+        "both_sim": "茬"
+      },
+      "full_sentence": "他在日本的餐厅里点了一份荞麦面。"
+    },
+    {
+      "critical_target": "哇",
+      "sentence_number": 82,
+      "distractors": {
+        "orth_sim": "桂",
+        "phon_sim": "挖",
+        "both_dif": "郡",
+        "both_sim": "蛙"
+      },
+      "full_sentence": "他喝了很多酒，到家之后哇的一声吐了出来。"
+    },
+    {
+      "critical_target": "浩",
+      "sentence_number": 83,
+      "distractors": {
+        "orth_sim": "惜",
+        "phon_sim": "郝",
+        "both_dif": "瘟",
+        "both_sim": "诰"
+      },
+      "full_sentence": "大军浩浩荡荡渡过了长江。"
+    },
+    {
+      "critical_target": "诽",
+      "sentence_number": 84,
+      "distractors": {
+        "orth_sim": "谙",
+        "phon_sim": "废",
+        "both_dif": "円",
+        "both_sim": "非"
+      },
+      "full_sentence": "我们要尊重事实，不能随意诽谤别人。"
+    },
+    {
+      "critical_target": "训",
+      "sentence_number": 85,
+      "distractors": {
+        "orth_sim": "讹",
+        "phon_sim": "迅",
+        "both_dif": "腰",
+        "both_sim": "巡"
+      },
+      "full_sentence": "他上课时偷玩手机，被班主任狠狠训了一顿。"
+    }
+  ]
+}

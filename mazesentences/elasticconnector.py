@@ -8,6 +8,7 @@ import time
 import random
 import yaml
 from math import log10
+from cedict import CEDict
 random.seed(int(time.perf_counter()))
 
 class ElasticConnectorBase(object):
@@ -90,9 +91,29 @@ class ElasticConnector(ElasticConnectorBase):
         ignore_parts = {'URL', 'START', 'END', 'ROOT', '.', 'X', 'NUM', '_'}
         ignore_low = {'PRON', 'CONJ'}
 
-        # print('Target sentence: {}'.format(sentence))
-        tokenized = self.tokenize_sentence(sentence)
-        # print('Tokenized:\t{}'.format(tokenized))
+        print('Target sentence: \t{}'.format(sentence))
+        if type(sentence) is str:
+            tokenized = self.tokenize_sentence(sentence)
+        elif type(sentence) is list:
+            tokenized = []
+            for token in sentence:
+                if len(token) == 1:
+                    tokenized.append(token)
+                elif '，' in token:
+                    tokenized.append(token[:token.index('，')])
+                    tokenized.append(',')
+                    tokenized.append(token[token.index('，')+1:])
+                elif '。' in token:
+                    tokenized.append(token[:token.index('。')])
+                    tokenized.append('.')
+                else:
+                    tokenized.append(token)
+
+            # print('Tokenized sentence: ', tokenized)
+
+        else:
+            raise TypeError('Sentence type invalid')
+        print('Tokenized sentence:\t{}'.format(tokenized))
 
         multi_parts = []
         revised_tokenized = []
@@ -117,13 +138,13 @@ class ElasticConnector(ElasticConnectorBase):
         # print(multi_parts)
         # print(tokenized)
 
-        if critical_token not in tokenized:
-            print('Critical token does not appear as a standalone character')
-            return False
+        # if critical_token not in tokenized:
+        #     print('Critical token does not appear as a standalone character')
+        #     return (False, tokenized)
 
         antisentence = ['Ｘ'*len(tokenized[0])]
         for i in range(1, len(tokenized)):
-            if tokenized[i] == critical_token:
+            if critical_token in tokenized[i]:
                 antisentence.append('＃'*len(tokenized[i]))
                 continue
             elif len(tokenized[i]) == 1 and unicodedata.category(tokenized[i])[0] == 'P':
@@ -415,6 +436,9 @@ class ElasticConnector(ElasticConnectorBase):
         #
         # print('To be tokenized: ', sentence)
 
+        cedict = CEDict(file_name='data/cedict_1_0_ts_utf-8_mdbg.txt')
+        cedict.load_dict(ignore_roman=True, load_both=False)
+
         resp = requests.get(
             '{}/{}/_analyze'.format(self.database_url, self.index),
             data=bytearray(sentence, 'utf-8'),
@@ -449,27 +473,59 @@ class ElasticConnector(ElasticConnectorBase):
                 tokenized.append(token['token'])
             elif self.check_token_exists(token['token']):
                 tokenized.append(token['token'])
-            # elif len(token['token']) == 1 and unicodedata.category(token['token'])[0] == 'P':
-            #     tokenized.append(token['token'])
-            # elif len(token['token']) == 1:
-            #     tokenized.append(toke)
             else:
                 token_split = list(token['token'])
                 valid_tokens = []
-                for char in token_split:
-                    if self.check_token_exists(char):
-                        valid_tokens.append(char)
 
-                if len(token_split) == len(valid_tokens):
-                    # retokenized += token_split
+                if cedict.check_simp_word(token['token']):
                     tokenized.append(tuple(token_split))
                 else:
-                    tokenized.append(token['token'])
-                    # retokenized.append(token['token'])
+                    last = len(token_split)
+                    sub_toks = []
+                    i = 0
+                    while i < last:
+                        for j in range(len(token_split), i, -1):
+                            print('Checking:', i, j, token_split[i:j])
+                            substr = ''.join(token_split[i:j])
+                            if cedict.check_simp_word(substr):
+                                if self.check_token_exists(substr):
+                                    sub_toks.append(substr)
+                                else:
+                                    sub_toks.append(tuple(substr))
+
+                                i += len(sub_toks[-1])
+
+                    # print(sub_toks)
+                    if sub_toks and len(sub_toks) < len(token_split):
+                        tokenized += sub_toks
+                    else:
+                        for char in token_split:
+                            if self.check_token_exists(char):
+                                valid_tokens.append(char)
+
+                        if len(token_split) == len(valid_tokens):
+                            tokenized += token_split
+                            # tokenized.append(tuple(token_split))
+                        else:
+                            tokenized.append(token['token'])
+                            # retokenized.append(token['token'])
 
                 # print(token['token'], token_split)
 
             prev_end = token['end_offset']
+
+        if sentence[-1] not in tokenized[-1]:
+            tokenized.append(sentence[-1])
+
+        tot_chars = 0
+        for tok in tokenized:
+            tot_chars += len(tok)
+
+        if tot_chars != len(sentence):
+            print('Length of tokenized ({}) is not equal to length of sentence ({})'.format(tot_chars, len(sentence)))
+            print('Sentence:\t', sentence)
+            print('Tokenized:\t', tokenized)
+            print()
 
         # if len(manual_tokens) > 0:
         #     for tok in manual_tokens:

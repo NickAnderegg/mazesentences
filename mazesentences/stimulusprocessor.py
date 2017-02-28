@@ -237,7 +237,9 @@ def get_sentences():
 
 def regenerate_distractors():
     trials_file = _get_trials_file(increment=False)
+    print('Reading from', trials_file)
     new_trials_file = _get_trials_file()
+    print('Will write new trials file at', new_trials_file)
 
     with trials_file.open('r', encoding='utf-8') as f:
         trials_list = json.load(f)
@@ -253,8 +255,8 @@ def regenerate_distractors():
 
     trials = {'sentences': trials}
 
-    # selector = Selector('http://192.168.25.150:9200/', 'chinese_simplified', 2, min_year=1980)
-    selector = Selector('http://home.anderegg.io:9292/', 'chinese_simplified', 2, min_year=1980)
+    selector = Selector('http://192.168.25.150:9200/', 'chinese_simplified', 2, min_year=1980)
+    # selector = Selector('http://home.anderegg.io:9292/', 'chinese_simplified', 2, min_year=1980)
     sentence_number = 0
     for trial in trials['sentences']:
         sentence_number += 1
@@ -275,7 +277,7 @@ def regenerate_distractors():
     # print(json.dumps(trials[:3], indent=2, ensure_ascii=False))
 
 def _get_trials_file(increment=True):
-    trials_file = pathlib.Path('mazesentences/data/generated_trials/trials_v001.json')
+    trials_file = pathlib.Path('mazesentences/data/generated_trials/trials_v100.json')
     if increment is False:
         last_file = pathlib.Path(trials_file)
 
