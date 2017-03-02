@@ -1,0 +1,78 @@
+========
+Sample Trials:
+========
+--------
+Trial: 1
+Critical: 枉 / Distractors – Both: 旺 | Orth: 析 | Phon: 亡 | Diff: 狙
+
+Full sentence: 他并没有犯罪但被指控，觉得自己很冤枉，悲愤交加。
+
+Target: 他 | 并 | 没有 | 犯罪 | 但 | 被 | 指控, | 觉得 | 自己 | 很 | 冤枉, | 悲愤 | 交加.
+Alter.: Ｘ | 某 | 能力 | 各个 | 该 | 这 | 其他, | 农业 | 专门 | 日 | ＃＃, | 外国 | 一个.
+
+--------
+Trial: 10
+Critical: 芹 / Distractors – Both: 芯 | Orth: 苇 | Phon: 欣 | Diff: 液
+
+Full sentence: 作为蔬菜，芹菜也许不是最好吃的。
+
+Target: 作为 | 蔬菜, | 芹菜 | 也许 | 不是 | 最好 | 吃 | 的.
+Alter.: ＸＸ | 短程, | ＃＃ | 企业 | 部门 | 市场 | 到 | 不.
+
+--------
+Trial: 15
+Critical: 喋 / Distractors – Both: 嗲 | Orth: 哆 | Phon: 达 | Diff: 赢
+
+Full sentence: 公司同事小王是一个话唠，每一天都喋喋不休没完没了。
+
+Target: 公司 | 同事 | 小王 | 是 | 一个 | 话 | 唠, | 每一 | 天 | 都 | 喋喋不休 | 没  ->
+Alter.: ＸＸ | 就是 | 而且 | 为 | 其他 | 这 | 厂, | 商品 | 对 | 亦 | ＃＃＃＃ | 到  ->
+
+Target (cont.): 完 | 没了.
+Alter. (cont.): 某 | 国营.
+
+--------
+Trial: 27
+Critical: 桂 / Distractors – Both: 桧 | Orth: 佳 | Phon: 跪 | Diff: 儿
+
+Full sentence: 龙眼的另一个名字是桂圆。
+
+Target: 龙眼 | 的 | 另 | 一个 | 名字 | 是 | 桂 | 圆.
+Alter.: ＸＸ | 对 | 有 | 统计 | 之后 | 局 | ＃ | 到.
+
+--------
+Trial: 49
+Critical: 抬 / Distractors – Both: 胎 | Orth: 给 | Phon: 太 | Diff: 荫
+
+Full sentence: 救护车刚停下，两名医生就抬着担架下来了。
+
+Target: 救护 | 车 | 刚 | 停下, | 两 | 名 | 医生 | 就 | 抬 | 着 | 担架 | 下来 | 了.
+Alter.: ＸＸ | 对 | 看 | 技术, | 各 | 些 | 进行 | 县 | ＃ | 月 | 具有 | 从事 | 性.
+
+--------
+Trial: 51
+Critical: 秘 / Distractors – Both: 铋 | Orth: 秧 | Phon: 俪 | Diff: 璜
+
+Full sentence: 指导员教育战士们绝对不可以泄露军事机密。
+
+Target: 指导 | 员 | 教育 | 战士 | 们 | 绝对 | 不 | 可以 | 泄露 | 军事 | 机密.
+Alter.: ＸＸ | 均 | 大体 | 这样 | 却 | 作品 | 哇 | 暂行 | 事业 | 常常 | 包含.
+
+--------
+Trial: 58
+Critical: 铝 / Distractors – Both: 侣 | Orth: 铬 | Phon: 礼 | Diff: 猿
+
+Full sentence: 装潢公司建议说窗框要用铝合金。
+
+Target: 装潢 | 公司 | 建议 | 说 | 窗框 | 要用 | 铝 | 合金.
+Alter.: ＸＸ | 从此 | 只是 | 这 | 例如 | 立即 | ＃ | 可以.
+
+--------
+Trial: 71
+Critical: 慰 / Distractors – Both: 熨 | Orth: 憨 | Phon: 位 | Diff: 沧
+
+Full sentence: 他今天心情很差，拒绝了所有人的安慰离开了。
+
+Target: 他 | 今天 | 心情 | 很 | 差, | 拒绝 | 了 | 所有 | 人的 | 安慰 | 离开 | 了.
+Alter.: Ｘ | 种种 | 生命 | 业 | 社, | 相互 | 仍 | 而且 | 知道 | ＃＃ | 造成 | 跟.
+

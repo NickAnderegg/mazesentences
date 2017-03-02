@@ -8,7 +8,7 @@ import time
 import random
 import yaml
 from math import log10
-from cedict import CEDict
+from .cedict import CEDict
 random.seed(int(time.perf_counter()))
 
 class ElasticConnectorBase(object):
@@ -379,6 +379,7 @@ class ElasticConnector(ElasticConnectorBase):
                 # poss_token = poss_token.split('_')
                 # antisentence.append(poss_token[0])
                 antisentence.append(poss_token)
+                # print('\tDistractor for {}:\t{}'.format(tokenized[i], poss_token))
                 break
 
         # print('Anti-sentence:\t{}'.format(antisentence))
@@ -436,7 +437,7 @@ class ElasticConnector(ElasticConnectorBase):
         #
         # print('To be tokenized: ', sentence)
 
-        cedict = CEDict(file_name='data/cedict_1_0_ts_utf-8_mdbg.txt')
+        cedict = CEDict(file_name='mazesentences/data/cedict_1_0_ts_utf-8_mdbg.txt')
         cedict.load_dict(ignore_roman=True, load_both=False)
 
         resp = requests.get(
@@ -485,7 +486,7 @@ class ElasticConnector(ElasticConnectorBase):
                     i = 0
                     while i < last:
                         for j in range(len(token_split), i, -1):
-                            print('Checking:', i, j, token_split[i:j])
+                            # print('Checking:', i, j, token_split[i:j])
                             substr = ''.join(token_split[i:j])
                             if cedict.check_simp_word(substr):
                                 if self.check_token_exists(substr):

@@ -1,0 +1,69 @@
+========
+Sample Trials:
+========
+--------
+Trial: 18
+Critical: 温 / Distractors – Both: 湾 | Orth: 滞 | Phon: 剜 | Diff: 讫
+
+Full sentence: 加拿大西海岸最繁华的城市就属温哥华了。
+
+Target: 加拿大 | 西海岸 | 最 | 繁华 | 的 | 城市 | 就 | 属 | 温哥华 | 了.
+Alter.: ＸＸＸ | 决定性 | ？ | 会议 | 各 | 包括 | 又 | 性 | ＃＃＃ | 都.
+
+--------
+Trial: 25
+Critical: 响 / Distractors – Both: 晌了 | Orth: 呐了 | Phon: 抢了 | Diff: 邬了
+
+Full sentence: 上课上到一半火警铃响了。
+
+Target: 上课 | 上 | 到 | 一半 | 火警 | 铃 | 响了.
+Alter.: ＸＸ | ？ | 某 | 因为 | 一切 | 不 | ＃.
+
+--------
+Trial: 26
+Critical: 洁 / Distractors – Both: 桔 | Orth: 桉 | Phon: 攫 | Diff: 蕴
+
+Full sentence: 小雯觉得自己只是爱干净，但是她男朋友觉得她有洁癖。
+
+Target: 小 | 雯 | 觉得 | 自己 | 只是 | 爱 | 干净, | 但是 | 她 | 男朋友 | 觉得 | 她  ->
+Alter.: Ｘ | 要 | 社会 | 人均 | 项目 | ？ | 互相, | 人员 | 的 | 委员会 | 最终 | 呀  ->
+
+Target (cont.): 有 | 洁 | 癖.
+Alter. (cont.): 日 | ＃ | 较.
+
+--------
+Trial: 34
+Critical: 耗 / Distractors – Both: 蚝 | Orth: 蚊 | Phon: 勺 | Diff: 揾
+
+Full sentence: 老鼠另外一个名字是耗子。
+
+Target: 老鼠 | 另外 | 一个 | 名字 | 是 | 耗子.
+Alter.: ＸＸ | ？？ | 意见 | 所谓 | 局 | ＃＃.
+
+--------
+Trial: 38
+Critical: 鸭 / Distractors – Both: 鸦 | Orth: 鸿 | Phon: 丫 | Diff: 胫
+
+Full sentence: 我最喜欢的宵夜是麻辣鸭脖。
+
+Target: 我 | 最 | 喜欢 | 的 | 宵夜 | 是 | 麻辣 | 鸭 | 脖.
+Alter.: Ｘ | ？ | 方式 | 仅 | 这个 | 全 | 公共 | ＃ | 又.
+
+--------
+Trial: 56
+Critical: 溪 / Distractors – Both: 漆 | Orth: 演 | Phon: 昔 | Diff: 晏
+
+Full sentence: 他们在山中迷路了，只能沿着溪流一直走。
+
+Target: 他们 | 在 | 山中 | 迷路 | 了, | 只能 | 沿着 | 溪流 | 一直 | 走.
+Alter.: ＸＸ | 年 | 惟一 | 这些 | 是, | 经济 | 政治 | ＃＃ | ？？ | 权.
+
+--------
+Trial: 75
+Critical: 哇 / Distractors – Both: 蛙 | Orth: 桂 | Phon: 挖 | Diff: 郡
+
+Full sentence: 他喝了很多酒，到家之后哇的一声吐了出来。
+
+Target: 他 | 喝了 | 很多 | 酒, | 到家 | 之后 | 哇 | 的 | 一声 | 吐 | 了 | 出来.
+Alter.: Ｘ | 其余 | 具有 | 懂, | ？？ | 原始 | ＃ | 为 | 也是 | 各 | 就 | 初级.
+

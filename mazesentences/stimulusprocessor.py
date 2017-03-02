@@ -308,7 +308,9 @@ def _get_trials_file(increment=True):
         return trials_file
 
 def generate_sample(n, rand=True, choices=None):
-    trials_file = _get_trials_file(increment=False)
+    # trials_file = _get_trials_file(increment=False)
+    print(pathlib.Path().cwd())
+    trials_file = pathlib.Path('mazesentences/data/generated_trials/trials_v103-modified_ambiguous.json')
 
     with trials_file.open('r', encoding='utf-8') as f:
         trials_list = json.load(f)
@@ -319,7 +321,10 @@ def generate_sample(n, rand=True, choices=None):
     else:
         if not choices:
             choices = range(1, n+1)
+        else:
+            choices = sorted(choices)
 
+    print(len(trials_list))
     subset = []
     for choice in choices:
         subset.append(trials_list[choice-1])
@@ -375,7 +380,7 @@ def generate_sample(n, rand=True, choices=None):
             file_output.append('Target (cont.): {}\n'.format(target_sentence[1]))
             file_output.append('Alter. (cont.): {}\n\n'.format(distractor_sentence[1]))
 
-    sample_file = pathlib.Path('mazesentences/data/trial_samples/trial_samples{}.txt'.format(trials_file.stem[-5:]))
+    sample_file = pathlib.Path('mazesentences/data/trial_samples/trial_samples-{}.txt'.format(trials_file.stem))
     with sample_file.open('w', encoding='utf-8') as f:
         f.writelines(file_output)
 
