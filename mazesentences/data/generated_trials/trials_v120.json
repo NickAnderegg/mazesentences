@@ -1,0 +1,70 @@
+{
+  "sentences": [
+    {
+      "distractors": {
+        "orth_sim": "枉",
+        "phon_sim": "述",
+        "both_sim": "炷",
+        "both_dif": "淹"
+      },
+      "full_sentence": "变形金刚里面我最喜欢的角色是擎天柱，他很酷。",
+      "critical_target": "柱",
+      "sentence_number": 1
+    },
+    {
+      "distractors": {
+        "orth_sim": "这",
+        "phon_sim": "烷",
+        "both_sim": "汶",
+        "both_dif": "钙"
+      },
+      "full_sentence": "弟弟在饭桌旁写他的作文作业。",
+      "critical_target": "文",
+      "sentence_number": 2
+    },
+    {
+      "distractors": {
+        "orth_sim": "映",
+        "phon_sim": "洋",
+        "both_sim": "秧",
+        "both_dif": "济"
+      },
+      "full_sentence": "城门失火，殃及池鱼",
+      "critical_target": "殃",
+      "sentence_number": 3
+    },
+    {
+      "distractors": {
+        "orth_sim": "秧",
+        "phon_sim": "俪",
+        "both_sim": "铋",
+        "both_dif": "璜"
+      },
+      "full_sentence": "我最喜欢看的内衣秀是维多利亚的秘密举行的。",
+      "critical_target": "秘",
+      "sentence_number": 4
+    },
+    {
+      "distractors": {
+        "orth_sim": "按",
+        "phon_sim": "邪",
+        "both_sim": "诘",
+        "both_dif": "韵"
+      },
+      "full_sentence": "他很穷，手头很拮据。",
+      "critical_target": "拮",
+      "sentence_number": 5
+    },
+    {
+      "distractors": {
+        "orth_sim": "铬",
+        "phon_sim": "明",
+        "both_sim": "酩",
+        "both_dif": "澳"
+      },
+      "full_sentence": "她很伤心，喝得酩酊大醉。",
+      "critical_target": "铭",
+      "sentence_number": 6
+    }
+  ]
+}

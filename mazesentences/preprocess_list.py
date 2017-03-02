@@ -1,6 +1,7 @@
 import csv
 import pathlib
 import json
+import sys
 
 from .sentenceselector import Selector
 
@@ -145,123 +146,56 @@ def reprocess_distractors(file_in, file_out):
     with file_in.open('r', encoding='utf-8') as f:
         trials_in = json.load(f)['sentences']
 
-        new_set = []
+        new_set, modified_set = [], []
         count = 0
         bad_count = 0
         bad_trials = []
         updated_dist, correct_dist = 0, 0
         for trial in trials_in:
-            bad = False
-            saw_critical = False
-            for pair in trial['sentence']:
-                if bad:
-                    continue
-                if len(pair) != 2:
-                    bad = True
-                    bad_count += 1
-                    bad_trials.append(trial['sentence_number'])
-                    continue
-                if saw_critical and '＃' in pair[1]:
-                    print('\nDouble critical markers:', trial['sentence'], '\n')
-                    bad = True
-                    bad_count += 1
-                    bad_trials.append(trial['sentence_number'])
-                    continue
-                elif ('.' in pair[0] or ',' in pair[0]) and pair[1] != '*':
-                    print('\nMisaligned punctuation:', trial['sentence'], '\n')
-                    bad = True
-                    bad_count += 1
-                    bad_trials.append(trial['sentence_number'])
-                    continue
-                elif '＃' in pair[1]:
-                    # print(pair[0].count(trial['critical_target']))
-                    # print(trial['sentence'])
+            # if trial['sentence_number'] != 83:
+            #     continue
 
-                    if len(pair[0]) > 1:
-                        modify_distractors = False
-                        for key, distractor in trial['distractors'].items():
-                            if modify_distractors:
-                                break
-                            if len(distractor) != len(pair[0]):
-                                modify_distractors = True
-                                break
+            # if not bad:
+            result = _check_trial(trial)
+            if type(result) is tuple:
+                trial_good, dist_update = result
+            else:
+                trial_good = result
 
-                            for i in range(len(pair[0])):
-                                if pair[0][i] == distractor[i] or pair[0][i] == trial['critical_target']:
-                                    continue
-                                else:
-                                    modify_distractors = True
-                                    break
-
-                        if not modify_distractors:
-                            # print('\nDistractors already correct...')
-                            # print('Critical char:', trial['critical_target'])
-                            # print('Critical word:', pair[0])
-                            # print('Distractors:', trial['distractors'], '\n')
-                            correct_dist += 1
-                            continue
-
-                        for key, distractor in trial['distractors'].items():
-                            new_distractor = []
-                            for char in pair[0]:
-                                if char == trial['critical_target']:
-                                     new_distractor.append(distractor)
-                                else:
-                                    new_distractor.append(char)
-                            trial['distractors'][key] = ''.join(new_distractor)
-
-                        # print('\nUpdated distractors...')
-                        # print('Critical char:', trial['critical_target'])
-                        # print('Critical word:', pair[0])
-                        # print('Distractors:', trial['distractors'], '\n')
-                        updated_dist += 1
-
-                    saw_critical = True
-                elif len(pair[0]) != len(pair[1]):
-                    if 'Ｘ' in pair[1]:
-                        pair[1] = 'Ｘ' * len(pair[0])
-                    elif '＃' in pair[1]:
-                        for key, distractor in trial['distractors'].items():
-                            if bad:
-                                continue
-                            if len(pair[0]) != len(distractor):
-                                print('\nInvalid distractor...')
-                                print('Critical char:', trial['critical_target'])
-                                print('Critical word:', pair[0])
-                                print('Distract word:', distractor, '\n')
-                                bad = True
-                                bad_count += 1
-                                bad_trials.append(trial['sentence_number'])
-                                continue
-                            for i in range(len(pair[0])):
-                                if pair[0][i] != distractor[i] and pair[0][i] != trial['critical_target']:
-                                    print('\nInvalid distractor...')
-                                    print('Critical char:', trial['critical_target'])
-                                    print('Critical word:', pair[0])
-                                    print('Distract word:', distractor, '\n')
-                                    bad = True
-                                    bad_count += 1
-                                    bad_trials.append(trial['sentence_number'])
-                                    continue
-                    else:
-                        print(trial['sentence'], '\n')
-                        bad = True
-                        bad_count += 1
-                        bad_trials.append(trial['sentence_number'])
-
-            if not bad:
+            if trial_good:
                 count += 1
-                trial['sentence_number'] = count
+                updated_dist += dist_update
+                # trial['sentence_number'] = count
                 new_set.append(trial)
                 # print(trial)
             else:
-                new_distractors = selector.distractor_sentence(
-                    trial['full_sentence'],
-                    trial['critical_target']
-                )
-                trial['sentence'] = new_distractors
-                print(trial)
-                new_set.append(trial)
+                bad_count += 1
+                try:
+                    new_distractors = selector.distractor_sentence(
+                        trial['full_sentence'],
+                        trial['critical_target']
+                    )
+                    trial['sentence'] = new_distractors
+                    print('New distractors:', new_distractors)
+                    print('Checking new trial...')
+                    result = _check_trial(trial)
+                    if type(result) is tuple:
+                        trial_good, dist_update = result
+                    else:
+                        trial_good = result
+
+                    if trial_good:
+                        count += 1
+                        updated_dist += dist_update
+                        new_set.append(trial)
+                        modified_set.append(trial)
+                    else:
+                        print('\n!!! New trial also bad... !!!\n')
+                except KeyboardInterrupt:
+                    quit()
+                # except Exception as e:
+                #     new_set.append(trial)
+                #     print('\n\n\n\n!!!!!!!!\nERROR ON SENTENCE {}\n\n{}!!!!!!!!\n\n\n\n'.format(trial['sentence_number'], e))
 
         print('Good:', count, 'Bad:', bad_count)
         print('Updated distractors:', updated_dist, 'Correct distractors:', correct_dist)
@@ -271,11 +205,128 @@ def reprocess_distractors(file_in, file_out):
         with file_out.open('w', encoding='utf-8') as f:
             json.dump({'sentences': new_set}, f, ensure_ascii=False, indent=2)
 
+        file_out = pathlib.Path(str(str(file_out.parent) + '/' + str(file_out.stem) + '-modified_only' + str(file_out.suffix)))
+        with file_out.open('w', encoding='utf-8') as f:
+            json.dump({'sentences': modified_set}, f, ensure_ascii=False, indent=2)
+
+def _check_trial(trial):
+    print('\n--Sentence number:', trial['sentence_number'])
+    bad = False
+    saw_critical = False
+    updated_dist = 0
+    for pair in trial['sentence']:
+        if bad:
+            break
+        if len(pair) != 2:
+            bad = True
+            # bad_count += 1
+            # bad_trials.append(trial['sentence_number'])
+            return False
+            break
+        if saw_critical and '＃' in pair[1]:
+            print('\nDouble critical markers:', trial['sentence'], '\n')
+            bad = True
+            # bad_count += 1
+            # bad_trials.append(trial['sentence_number'])
+            return False
+            continue
+        elif ('.' in pair[0] or ',' in pair[0]) and pair[1] != '*':
+            print('\nMisaligned punctuation:', trial['sentence'], '\n')
+            bad = True
+            # bad_count += 1
+            # bad_trials.append(trial['sentence_number'])
+            return False
+            continue
+        elif '＃' in pair[1]:
+            saw_critical = True
+        elif len(pair[0]) != len(pair[1]):
+            if 'Ｘ' in pair[1]:
+                pair[1] = 'Ｘ' * len(pair[0])
+            elif '＃' in pair[1]:
+                for key, distractor in trial['distractors'].items():
+                    if bad:
+                        return False
+                    if len(pair[0]) != len(distractor):
+                        print('\nInvalid distractor...')
+                        print('Critical char:', trial['critical_target'])
+                        print('Critical word:', pair[0])
+                        print('Distract word:', distractor, '\n')
+                        bad = True
+                        # bad_count += 1
+                        # bad_trials.append(trial['sentence_number'])
+                        return False
+                        continue
+                    for i in range(len(pair[0])):
+                        if pair[0][i] != distractor[i] and pair[0][i] != trial['critical_target']:
+                            print('\nInvalid distractor...')
+                            print('Critical char:', trial['critical_target'])
+                            print('Critical word:', pair[0])
+                            print('Distract word:', distractor, '\n')
+                            bad = True
+                            # bad_count += 1
+                            # bad_trials.append(trial['sentence_number'])
+                            return False
+                            continue
+            else:
+                print('Misaligned sentence: ', trial['sentence'], '\n')
+                bad = True
+                # bad_count += 1
+                # bad_trials.append(trial['sentence_number'])
+                return False
+
+    for pair in trial['sentence']:
+        # print(pair[0].count(trial['critical_target']))
+        # print(trial['sentence'])
+
+        if '＃' in pair[1] and len(pair[0]) > 1:
+            modify_distractors = False
+            for key, distractor in trial['distractors'].items():
+                if modify_distractors:
+                    break
+                if len(distractor) != len(pair[0]):
+                    modify_distractors = True
+                    break
+
+                for i in range(len(pair[0])):
+                    if pair[0][i] == distractor[i] or pair[0][i] == trial['critical_target']:
+                        continue
+                    else:
+                        modify_distractors = True
+                        break
+
+            if not modify_distractors:
+                # print('\nDistractors already correct...')
+                # print('Critical char:', trial['critical_target'])
+                # print('Critical word:', pair[0])
+                # print('Distractors:', trial['distractors'], '\n')
+                # correct_dist += 1
+                break
+
+            trial['original_distractors'] = dict(trial['distractors'])
+
+            for key, distractor in trial['distractors'].items():
+                new_distractor = []
+                for char in pair[0]:
+                    if char == trial['critical_target']:
+                         new_distractor.append(distractor)
+                    else:
+                        new_distractor.append(char)
+                trial['distractors'][key] = ''.join(new_distractor)
+
+            print('\n--Updated distractors for', trial['sentence_number'], '\n')
+            print('Critical char:', trial['critical_target'])
+            print('Critical word:', pair[0])
+            print('Distractors:', trial['distractors'], '\n')
+            updated_dist = 1
+
+
+    return (trial, updated_dist)
+
 
 def main():
-    # trials = read_list('data/new_sentences.txt')
-    # write_trials(trials, 'data/generated_trials/trials_v110.json')
-    reprocess_distractors('mazesentences/data/generated_trials/trials_v103-modified_ambiguous.json', 'mazesentences/data/generated_trials/trials_v103.1.json')
+    # trials = read_list('mazesentences/data/new_sentences_2.txt')
+    # write_trials(trials, 'mazesentences/data/generated_trials/trials_v120.json')
+    reprocess_distractors('mazesentences/data/generated_trials/trials_v120.json', 'mazesentences/data/generated_trials/trials_v120.1.json')
     # pull_bad('data/generated_trials/trials_v102.json',
     #     [34,26,75,56,18,25,38],
     #     [ 1, 5, 4, 8, 2, 1, 1]

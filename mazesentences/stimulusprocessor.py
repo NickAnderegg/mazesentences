@@ -277,7 +277,7 @@ def regenerate_distractors():
     # print(json.dumps(trials[:3], indent=2, ensure_ascii=False))
 
 def _get_trials_file(increment=True):
-    trials_file = pathlib.Path('mazesentences/data/generated_trials/trials_v100.json')
+    trials_file = pathlib.Path('mazesentences/data/generated_trials/trials_v120.json')
     if increment is False:
         last_file = pathlib.Path(trials_file)
 

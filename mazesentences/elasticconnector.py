@@ -7,7 +7,7 @@ import unicodedata
 import time
 import random
 import yaml
-from math import log10
+from math import log10, sqrt
 from .cedict import CEDict
 random.seed(int(time.perf_counter()))
 
@@ -88,8 +88,8 @@ class ElasticConnector(ElasticConnectorBase):
             return False
 
     def distractor_sentence(self, sentence, critical_token):
-        ignore_parts = {'URL', 'START', 'END', 'ROOT', '.', 'X', 'NUM', '_'}
-        ignore_low = {'PRON', 'CONJ'}
+        ignore_parts = {'URL', 'START', 'END', 'ROOT', '.', 'X', '_'}
+        ignore_low = {'PRON', 'CONJ', 'NUM'}
 
         print('Target sentence: \t{}'.format(sentence))
         if type(sentence) is str:
@@ -128,6 +128,11 @@ class ElasticConnector(ElasticConnectorBase):
                 revised_tokenized += token
                 count += len(token)
 
+            # count += 1
+
+        # print(revised_tokenized)
+        # print(multi_parts)
+
         tokenized = revised_tokenized
 
         if len(tokenized[-1]) > 1 or unicodedata.category(tokenized[-1])[0] != 'P':
@@ -143,15 +148,69 @@ class ElasticConnector(ElasticConnectorBase):
         #     return (False, tokenized)
 
         antisentence = ['Ｘ'*len(tokenized[0])]
+        antisentence_dict = {0: 'Ｘ'*len(tokenized[0])}
         for i in range(1, len(tokenized)):
+            # print('\nTokenized:\t', tokenized)
+            # print('Multi-parts:\t', multi_parts)
+            # # print('Anti-sentence:\t', antisentence)
+            # print('Anti-dict:\t', antisentence_dict)
             if critical_token in tokenized[i]:
-                antisentence.append('＃'*len(tokenized[i]))
+                if multi_parts[i] != i:
+                    ### antisentence[multi_parts[i]] = '＃'*len(tokenized[multi_parts[i]])
+                    if '＃' in antisentence_dict[multi_parts[i]]:
+                        antisentence_dict[multi_parts[i]] += '＃'*len(tokenized[i])
+                    else:
+                        antisentence_dict[multi_parts[i]] = '＃'*(i-multi_parts[i])
+                    # for crit_ix in range(multi_parts[i], i+1):
+                    #     # print('Before future crit: ', tokenized)
+                    #     # print('Before future crit: ', antisentence)
+                    #     try:
+                    #         antisentence[crit_ix] = '＃'*len(tokenized[crit_ix])
+                    #     except IndexError:
+                    #         antisentence.append('＃'*len(tokenized[crit_ix]))
+                    #     # print('After future crit: ', tokenized)
+                    #     # print('After future crit: ', antisentence)
+                else:
+                    ### antisentence.append('＃'*len(tokenized[i]))
+                    antisentence_dict[i] = '＃'*len(tokenized[i])
+                # print('\nCritical token found:', tokenized)
+                # print('Critical token found:', antisentence)
                 continue
             elif len(tokenized[i]) == 1 and unicodedata.category(tokenized[i])[0] == 'P':
-                antisentence.append('*')
+                ### antisentence.append('*')
+                antisentence_dict[i] = '*'
                 continue
             elif multi_parts[i] != i:
-                continue
+                # print('Critical token:', critical_token, 'i:', i, 'origin:', multi_parts[i])
+                # if '＃' in antisentence[multi_parts[i]]:
+                if '＃' in antisentence_dict[multi_parts[i]]:
+                    ### antisentence.append('＃'*len(tokenized[i]))
+                    # continue
+                    antisentence_dict[multi_parts[i]] += '＃'*len(tokenized[i])
+                # elif 'Ｘ' in antisentence[multi_parts[i]]:
+                elif 'Ｘ' in antisentence_dict[multi_parts[i]]:
+                    # antisentence[multi_parts[i]] += 'Ｘ'*len(tokenized[i])
+                    ### antisentence.append('Ｘ'*len(tokenized[i]))
+                    antisentence_dict[multi_parts[i]] += 'Ｘ'*len(tokenized[i])
+                    continue
+
+            # found_multipart_crit = False
+            # for future_tok in range(i+1, len(tokenized)):
+            #     if multi_parts[future_tok] != i:
+            #         break
+            #
+            #     if critical_token in tokenized[future_tok]:
+            #         critical_ix = i+1
+            #         while critical_ix < len(tokenized) and multi_parts[critical_ix] == i:
+            #             antisentence.append('＃'*len(tokenized[critical_ix]))
+            #             critical_ix += 1
+            #         print('Future crit: ', tokenized)
+            #         print('Future crit: ', antisentence)
+            #         found_multipart_crit = True
+            #         break
+            # if found_multipart_crit:
+            #     continue
+
             combined_probs = dict()
             word_probs = dict()
             # ProbTuple = namedtuple('Probabilities', [2, 3, 4, 5])
@@ -207,6 +266,7 @@ class ElasticConnector(ElasticConnectorBase):
 
             weighted_words = list(weighted_words.items())
             weighted_words = sorted(weighted_words, key=itemgetter(1))
+            # print('Number of weighted word:', len(weighted_words))
             # print({key for key, val in weighted_words})
             # print(weighted_words[-10:])
             # freq_cutoff = weighted_words[-10][1]/1000
@@ -240,6 +300,8 @@ class ElasticConnector(ElasticConnectorBase):
                     # else:
                         # print('Allowed Part: ', part, '\tFreq: ', freq)
 
+            # print(prohibited_parts)
+
             # for part in (ignore_parts | ignore_low):
             #     # prohibited_parts.append(
             #     #     {'regexp': {'token_1': '.*_{}'.format(part)}}
@@ -262,6 +324,7 @@ class ElasticConnector(ElasticConnectorBase):
 
             # prohibited_items = []
             prohibited_items = set()
+            # print('Number of weighted word:', len(weighted_words))
             if len(weighted_words) > 5:
                 freq_cutoff = weighted_words[-5][1]/1000
             else:
@@ -276,14 +339,24 @@ class ElasticConnector(ElasticConnectorBase):
                     #     { 'regexp': {'token_1': '{}_.*'.format(word)}}
                     # )
                     prohibited_items.add(word)
+            # print('Number prohibited:', len(prohibited_items))
 
 
                 # for ix, parent in enumerate(multi_parts[i+1:]):
                 #     if parent != i+ix
 
             # prohibition = prohibited_parts + prohibited_items[:256]
+            if len(prohibited_items) > 0 and len(weighted_words) > 0:
+                possibilities_size = len(prohibited_items)/len(weighted_words)*(len(weighted_words)-len(prohibited_items))*10
+            else:
+                possibilities_size = 2000
+
+            if possibilities_size < 2000:
+                possibilities_size = 2000
+            elif possibilities_size >= 10000:
+                possibilities_size = 9999
             possibilities_query = {
-                'size': 2500,
+                'size': possibilities_size, #int(sqrt(len(prohibited_items)) * 175),
                 'query': {
                     'function_score': {
                         'filter': {
@@ -336,40 +409,61 @@ class ElasticConnector(ElasticConnectorBase):
                 sort_poss.append((new_sort, result))
 
             possibilities = [result for sort, result in sorted(sort_poss, key=itemgetter(0), reverse=True)]
-
+            # print('Number possibilities:', len(possibilities))
+            # not_rejected = {'prelim': 0, 'pos_dist': 0, 'past_reject': 0}
+            reject_count = {'tok': 0, 'anti': 0, 'ignore_low': 0,'prohib_items':0, 'ignore': 0, 'prohib_parts': 0, 'prt': 0}
+            # overall_reject = 0
+            # prohib_reject = 0
+            # cutoff_reject = 0
+            rejected_low = []
             for result in possibilities:
                 poss_token, poss_part = tuple(result['_source']['token_1'].split('_'))
 
                 if poss_token in tokenized:
+                    # reject_count['tok'] += 1
                     continue
-                elif poss_token in antisentence:
+                elif poss_token in antisentence_dict.values():
+                    # reject_count['anti'] += 1
                     continue
                 elif poss_token in prohibited_items:
+                    # reject_count['prohib_items'] += 1
                     continue
-                elif poss_part in (ignore_parts | ignore_low):
-                    continue
-                elif poss_part in prohibited_parts:
+                elif poss_part in ignore_parts:
+                    # reject_count['ignore'] += 1
                     continue
                 elif i < 3 and poss_part == 'PRT':
+                    # reject_count['prt'] += 1
+                    continue
+                elif poss_part in prohibited_parts:
+                    # reject_count['prohib_parts'] += 1
+                    continue
+                elif poss_part in ignore_low:
+                    reject_count['ignore_low'] += 1
+                    rejected_low.append((poss_token, poss_part))
                     continue
 
+                # not_rejected['prelim'] += 1
                 pos_dist = self.token_pos_dist(poss_token)
                 if not pos_dist:
                     continue
+                # not_rejected['pos_dist'] += 1
                 reject = False
                 for pos, freq in pos_dist:
                     if freq > Decimal(1):
                         if pos in prohibited_parts:
                             # print('Rejecting prohibited {} ({}), {} / Freq: {}'.format(poss_token, poss_part, pos, freq))
                             reject = True
+                            # prohib_reject += 1
                             break
-                        elif pos in cutoff_parts:
+                        if pos in cutoff_parts:
                             if freq > Decimal(20) or (freq > Decimal(5) and i < 3):
                                 # print('Rejecting cutoff {} ({}), {} / Freq: {}'.format(poss_token, poss_part, pos, freq))
                                 reject = True
+                                # cutoff_reject += 1
                                 break
 
                 if reject:
+                    # overall_reject += 1
                     continue
                     # if pos in prohibited_parts:
                     #     print('Token: {}\tPOS: {}\tFreq: {}'.format(poss_token, pos, freq))
@@ -378,20 +472,82 @@ class ElasticConnector(ElasticConnectorBase):
 
                 # poss_token = poss_token.split('_')
                 # antisentence.append(poss_token[0])
-                antisentence.append(poss_token)
+                ### antisentence.append(poss_token)
+                antisentence_dict[i] = poss_token
                 # print('\tDistractor for {}:\t{}'.format(tokenized[i], poss_token))
                 break
+            if i not in antisentence_dict:
+                # print('Reject count:', reject_count)
+                # not_rejected_low = {'prelim': 0, 'pos_dist': 0, 'past_reject': 0}
+                # reject_count_low = {'tok': 0, 'anti': 0, 'ignore_low': 0,'prohib_items':0, 'ignore': 0, 'prohib_parts': 0, 'prt': 0}
+                overall_reject_low = 0
+                prohib_reject_low = 0
+                cutoff_reject_low = 0
+                # print('Num rejected low:', len(rejected_low))
+                # print(prohibited_parts)
+                for poss_token, poss_part in rejected_low:
+                    pos_dist = self.token_pos_dist(poss_token)
+                    if not pos_dist:
+                        continue
+                    # not_rejected_low['pos_dist'] += 1
+                    reject = False
+                    for pos, freq in pos_dist:
+                        if freq > Decimal(1):
+                            if pos in prohibited_parts:
+                                # print('Rejecting prohibited {} ({}), {} / Freq: {}'.format(poss_token, poss_part, pos, freq))
+                                reject = True
+                                prohib_reject_low += 1
+                                break
+                            if pos in cutoff_parts:
+                                if freq > Decimal(15) or (freq > Decimal(5) and i < 3):
+                                    # print('Rejecting cutoff {} ({}), {} / Freq: {}'.format(poss_token, poss_part, pos, freq))
+                                    reject = True
+                                    cutoff_reject_low += 1
+                                    break
 
+                    if reject:
+                        overall_reject_low += 1
+                        continue
+                    else:
+                        antisentence_dict[i] = poss_token
+                        break
+
+            if i not in antisentence_dict:
+                # print('Not rejected:', not_rejected_low)
+                # print('Rejected:', reject_count_low)
+                print('Prohib:', prohib_reject_low, 'Cutoff:', cutoff_reject_low, 'Overall:', overall_reject_low)
+                print('\n\n!!! NO OPTIONS FOUND FOR {} !!!\n\n'.format(i))
+                raise RuntimeError
+
+        # print('\nTokenized:\t{}'.format(tokenized))
         # print('Anti-sentence:\t{}'.format(antisentence))
+        # print('\nTokenized:\t{}'.format(tokenized))
+        # print('Anti-dict:\t', antisentence_dict)
         final_tokenized = []
+        final_antisentence = []
+        anti_ix = 0
         for ix, token in enumerate(tokenized):
             if ix == multi_parts[ix]:
                 final_tokenized.append(token)
+                final_antisentence.append(antisentence_dict[ix])
+                # if multi_parts[ix] < len(antisentence): # and '＃' in antisentence[multi_parts[ix]]:
+                ###final_antisentence.append(antisentence[anti_ix])
+                ###anti_ix += 1
             else:
                 final_tokenized[-1] += token
+                # if multi_parts[ix] < len(antisentence) and '＃' in antisentence[multi_parts[ix]]:
+                #     final_antisentence[-1] += antisentence[anti_ix]
+                #     anti_ix += 1
+
+            # print('\nTokenized:\t{}'.format(final_tokenized))
+            # print('Anti-sentence:\t{}'.format(final_antisentence))
 
 
         tokenized = final_tokenized
+
+        print('\nTokenized:\t{}'.format(tokenized))
+        # print('Anti-sentence:\t{}'.format(final_antisentence))
+        print('Anti-dict:\t', antisentence_dict)
 
         paired_sentence = []
         for i in range(len(tokenized)):
@@ -399,11 +555,11 @@ class ElasticConnector(ElasticConnectorBase):
             #     paired_sentence[-1] = [paired_sentence[-1][0] + tokenized[i], paired_sentence[-1][1] + tokenized[i]]
             # else:
             try:
-                paired_sentence.append([tokenized[i], antisentence[i]])
+                paired_sentence.append([tokenized[i], final_antisentence[i]])
             except IndexError:
                 print('Error! Antisentence generated incorrectly!')
                 print('Sentence:\t', tokenized)
-                print('Antisent:\t', antisentence)
+                print('Antisent:\t', final_antisentence)
                 return 'Error! {}'.format(paired_sentence)
 
         # print(json.dumps(paired_sentence, encoding='utf-8', ensure_ascii=False))
@@ -443,7 +599,7 @@ class ElasticConnector(ElasticConnectorBase):
         resp = requests.get(
             '{}/{}/_analyze'.format(self.database_url, self.index),
             data=bytearray(sentence, 'utf-8'),
-            params={'tokenizer': 'icu_tokenizer'}
+            params={'analyzer': 'smartcn'}
         )
         tokens = resp.json()['tokens']
         tokenized = []
