@@ -324,9 +324,9 @@ def _check_trial(trial):
 
 
 def main():
-    # trials = read_list('mazesentences/data/new_sentences_2.txt')
-    # write_trials(trials, 'mazesentences/data/generated_trials/trials_v120.json')
-    reprocess_distractors('mazesentences/data/generated_trials/trials_v120.json', 'mazesentences/data/generated_trials/trials_v120.1.json')
+    # trials = read_list('mazesentences/data/new_sentences_3.txt')
+    # write_trials(trials, 'mazesentences/data/generated_trials/trials_v130.json')
+    reprocess_distractors('mazesentences/data/generated_trials/trials_v140.json', 'mazesentences/data/generated_trials/trials_total.1.json')
     # pull_bad('data/generated_trials/trials_v102.json',
     #     [34,26,75,56,18,25,38],
     #     [ 1, 5, 4, 8, 2, 1, 1]

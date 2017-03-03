@@ -1,0 +1,70 @@
+{
+  "sentences": [
+    {
+      "critical_target": "肢",
+      "sentence_number": 1,
+      "distractors": {
+        "phon_sim": "湿",
+        "both_dif": "筵",
+        "orth_sim": "听",
+        "both_sim": "吱"
+      },
+      "full_sentence": "健身教练和会员难免有肢体接触。"
+    },
+    {
+      "critical_target": "棋",
+      "sentence_number": 2,
+      "distractors": {
+        "phon_sim": "脐",
+        "both_dif": "痒",
+        "orth_sim": "验",
+        "both_sim": "骐"
+      },
+      "full_sentence": "老爷子退休后的爱好就是找人下棋解闷。"
+    },
+    {
+      "critical_target": "温",
+      "sentence_number": 3,
+      "distractors": {
+        "phon_sim": "闻",
+        "both_dif": "汰",
+        "orth_sim": "愠",
+        "both_sim": "榅"
+      },
+      "full_sentence": "今天很冷，室外温度零下二十度。"
+    },
+    {
+      "critical_target": "岗",
+      "sentence_number": 4,
+      "distractors": {
+        "phon_sim": "港",
+        "both_dif": "意",
+        "orth_sim": "区",
+        "both_sim": "冈"
+      },
+      "full_sentence": "哨兵站在高高的山岗上。"
+    },
+    {
+      "critical_target": "宛",
+      "sentence_number": 5,
+      "distractors": {
+        "phon_sim": "愿",
+        "both_dif": "羁",
+        "orth_sim": "苛",
+        "both_sim": "苑"
+      },
+      "full_sentence": "她亭亭玉立的宛如一朵莲花。"
+    },
+    {
+      "critical_target": "任",
+      "sentence_number": 6,
+      "distractors": {
+        "phon_sim": "涔",
+        "both_dif": "拽",
+        "orth_sim": "夭",
+        "both_sim": "壬"
+      },
+      "full_sentence": "他新交的女朋友总是要这要那，十分任性。"
+    }
+  ]
+}

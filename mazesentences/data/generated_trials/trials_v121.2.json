@@ -1,0 +1,368 @@
+{
+  "sentences": [
+    {
+      "full_sentence": "变形金刚里面我最喜欢的角色是擎天柱，他很酷。",
+      "critical_target": "柱",
+      "distractors": {
+        "both_sim": "天炷",
+        "both_dif": "天淹",
+        "phon_sim": "天述",
+        "orth_sim": "天枉"
+      },
+      "sentence": [
+        [
+          "变形",
+          "ＸＸ"
+        ],
+        [
+          "金刚",
+          "其他"
+        ],
+        [
+          "里面",
+          "不是"
+        ],
+        [
+          "我",
+          "业"
+        ],
+        [
+          "最",
+          "与"
+        ],
+        [
+          "喜欢",
+          "所有"
+        ],
+        [
+          "的",
+          "级"
+        ],
+        [
+          "角色",
+          "因此"
+        ],
+        [
+          "是",
+          "想"
+        ],
+        [
+          "擎",
+          "呢"
+        ],
+        [
+          "天柱",
+          "＃＃"
+        ],
+        [
+          ",",
+          "*"
+        ],
+        [
+          "他",
+          "月"
+        ],
+        [
+          "很",
+          "这"
+        ],
+        [
+          "酷",
+          "权"
+        ],
+        [
+          "。",
+          "*"
+        ]
+      ],
+      "sentence_number": 1,
+      "original_distractors": {
+        "both_sim": "炷",
+        "both_dif": "淹",
+        "phon_sim": "述",
+        "orth_sim": "枉"
+      }
+    },
+    {
+      "full_sentence": "弟弟在饭桌旁写他的作文作业。",
+      "critical_target": "文",
+      "distractors": {
+        "both_sim": "作汶",
+        "both_dif": "作钙",
+        "phon_sim": "作烷",
+        "orth_sim": "作这"
+      },
+      "sentence": [
+        [
+          "弟弟",
+          "ＸＸ"
+        ],
+        [
+          "在",
+          "社"
+        ],
+        [
+          "饭桌",
+          "得到"
+        ],
+        [
+          "旁",
+          "多"
+        ],
+        [
+          "写",
+          "各"
+        ],
+        [
+          "他",
+          "则"
+        ],
+        [
+          "的",
+          "所"
+        ],
+        [
+          "作文",
+          "＃＃"
+        ],
+        [
+          "作业",
+          "由于"
+        ],
+        [
+          "。",
+          "*"
+        ]
+      ],
+      "sentence_number": 2,
+      "original_distractors": {
+        "both_sim": "汶",
+        "both_dif": "钙",
+        "phon_sim": "烷",
+        "orth_sim": "这"
+      }
+    },
+    {
+      "full_sentence": "城门失火，殃及池鱼",
+      "critical_target": "殃",
+      "distractors": {
+        "both_sim": "秧及",
+        "both_dif": "济及",
+        "phon_sim": "洋及",
+        "orth_sim": "映及"
+      },
+      "sentence": [
+        [
+          "城门",
+          "ＸＸ"
+        ],
+        [
+          "失",
+          "月"
+        ],
+        [
+          "火",
+          "岂"
+        ],
+        [
+          ",",
+          "*"
+        ],
+        [
+          "殃及",
+          "＃＃"
+        ],
+        [
+          "池",
+          "要"
+        ],
+        [
+          "鱼",
+          "就"
+        ],
+        [
+          ".",
+          "*"
+        ]
+      ],
+      "sentence_number": 3,
+      "original_distractors": {
+        "both_sim": "秧",
+        "both_dif": "济",
+        "phon_sim": "洋",
+        "orth_sim": "映"
+      }
+    },
+    {
+      "full_sentence": "我最喜欢看的内衣秀是维多利亚的秘密举行的。",
+      "critical_target": "秘",
+      "distractors": {
+        "both_sim": "铋密",
+        "both_dif": "璜密",
+        "phon_sim": "俪密",
+        "orth_sim": "秧密"
+      },
+      "sentence": [
+        [
+          "我",
+          "Ｘ"
+        ],
+        [
+          "最",
+          "与"
+        ],
+        [
+          "喜欢",
+          "环境"
+        ],
+        [
+          "看",
+          "社"
+        ],
+        [
+          "的",
+          "曾"
+        ],
+        [
+          "内衣",
+          "什么"
+        ],
+        [
+          "秀",
+          "不"
+        ],
+        [
+          "是",
+          "又"
+        ],
+        [
+          "维多利亚",
+          "以夷制夷"
+        ],
+        [
+          "的",
+          "要"
+        ],
+        [
+          "秘密",
+          "＃＃"
+        ],
+        [
+          "举行",
+          "公共"
+        ],
+        [
+          "的",
+          "即"
+        ],
+        [
+          "。",
+          "*"
+        ]
+      ],
+      "sentence_number": 4,
+      "original_distractors": {
+        "both_sim": "铋",
+        "both_dif": "璜",
+        "phon_sim": "俪",
+        "orth_sim": "秧"
+      }
+    },
+    {
+      "full_sentence": "他很穷，手头很拮据。",
+      "critical_target": "拮",
+      "distractors": {
+        "both_sim": "诘据",
+        "both_dif": "韵据",
+        "phon_sim": "邪据",
+        "orth_sim": "按据"
+      },
+      "sentence": [
+        [
+          "他",
+          "Ｘ"
+        ],
+        [
+          "很",
+          "与"
+        ],
+        [
+          "穷",
+          "军"
+        ],
+        [
+          ",",
+          "*"
+        ],
+        [
+          "手头",
+          "哲学"
+        ],
+        [
+          "很",
+          "月"
+        ],
+        [
+          "拮据",
+          "＃＃"
+        ],
+        [
+          "。",
+          "*"
+        ]
+      ],
+      "sentence_number": 5,
+      "original_distractors": {
+        "both_sim": "诘",
+        "both_dif": "韵",
+        "phon_sim": "邪",
+        "orth_sim": "按"
+      }
+    },
+    {
+      "full_sentence": "她很伤心，喝得酩酊大醉。",
+      "sentence_number": 6,
+      "sentence": [
+        [
+          "她",
+          "Ｘ"
+        ],
+        [
+          "很",
+          "由"
+        ],
+        [
+          "伤心",
+          "公司"
+        ],
+        [
+          ",",
+          "*"
+        ],
+        [
+          "喝",
+          "日"
+        ],
+        [
+          "得",
+          "而"
+        ],
+        [
+          "酩酊大醉",
+          "各种各样"
+        ],
+        [
+          "。",
+          "*"
+        ]
+      ],
+      "critical_target": "铭",
+      "distractors": {
+        "both_sim": "酩",
+        "both_dif": "澳",
+        "phon_sim": "明",
+        "orth_sim": "铬"
+      }
+    }
+  ]
+}
