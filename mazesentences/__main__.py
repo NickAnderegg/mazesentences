@@ -4,5 +4,6 @@
 
 # from .mazesentences import main
 # from .preprocess_list import main
-from .postprocess_list import main
+# from .postprocess_list import main
+from .process_practices import main
 main()
